@@ -72,7 +72,6 @@ export default function TarotExperience() {
   const [drawnCards, setDrawnCards] = useState<DrawnCard[]>([]);
   const [aiReading, setAiReading] = useState("");
   const [displayedReading, setDisplayedReading] = useState("");
-  const [aiModel, setAiModel] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
   const [aiError, setAiError] = useState("");
@@ -179,7 +178,6 @@ export default function TarotExperience() {
     setDisplayedReading("");
     setIsStreaming(false);
     setAiError("");
-    setAiModel("");
     setIsGenerating(false);
     setDeckOrder((prev) => shuffleIds(prev));
     setShuffleSeed((prev) => prev + 1);
@@ -212,7 +210,6 @@ export default function TarotExperience() {
     setAiReading("");
     setDisplayedReading("");
     setIsStreaming(false);
-    setAiModel("");
     setAiError("");
     setIsGenerating(false);
   };
@@ -266,7 +263,6 @@ export default function TarotExperience() {
     setAiReading("");
     setDisplayedReading("");
     setIsStreaming(false);
-    setAiModel("");
 
     try {
       const fallbackQuestion =
@@ -297,7 +293,6 @@ export default function TarotExperience() {
         throw new Error(data.error ?? "Không thể tạo luận giải lúc này.");
       }
 
-      setAiModel(data.model ?? "gemini-3-flash");
       setAiReading(data.reading);
     } catch (error) {
       setAiError(error instanceof Error ? error.message : "Đã xảy ra lỗi không xác định.");
