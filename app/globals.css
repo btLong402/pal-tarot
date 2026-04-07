@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #160f0e;
+  --foreground: #f8e9c2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
+  --font-title: var(--font-title);
 }
 
 body {
+  min-height: 100vh;
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), serif;
+}
+
+.font-title {
+  font-family: var(--font-title), serif;
+}
+
+.dynamic-bg {
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(252, 211, 146, 0.22), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(183, 80, 44, 0.2), transparent 38%),
+    radial-gradient(circle at 60% 80%, rgba(227, 169, 97, 0.16), transparent 42%),
+    linear-gradient(125deg, #1c1312 0%, #160f0e 52%, #120d0d 100%);
+  animation: ember-drift 18s ease-in-out infinite alternate;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  opacity: 0.2;
+  mix-blend-mode: soft-light;
+  background-image:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.16) 0.65px, transparent 0.85px),
+    radial-gradient(circle at 74% 78%, rgba(255, 255, 255, 0.12) 0.65px, transparent 0.85px);
+  background-size: 3px 3px, 4px 4px;
+}
+
+@keyframes ember-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+    filter: saturate(105%);
+  }
+  50% {
+    transform: translate3d(1.5%, -2%, 0) scale(1.04);
+    filter: saturate(112%);
+  }
+  100% {
+    transform: translate3d(2%, 1.5%, 0) scale(1.02);
+    filter: saturate(104%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dynamic-bg {
+    animation: none;
+  }
 }
