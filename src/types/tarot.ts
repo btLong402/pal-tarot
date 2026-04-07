@@ -11,7 +11,11 @@ export interface TarotCardData {
   image: string;
 }
 
-export type SpreadType = "daily" | "past-present-future" | "problem-cause-solution";
+export type SpreadType =
+  | "daily"
+  | "past-present-future"
+  | "problem-cause-solution"
+  | "custom";
 
 export interface SpreadDefinition {
   id: SpreadType;

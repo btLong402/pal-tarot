@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 import { NextResponse } from "next/server";
 import TAROT_SYSTEM_PROMPT from "@/src/constants/prompt";
 
@@ -13,7 +13,38 @@ type ReadingRequest = {
   }>;
 };
 
-const MODEL_CANDIDATES = ["gemini-3-flash", "gemini-2.5-flash", "gemini-2.0-flash"];
+const MODEL_CANDIDATES = ["gemini-3-flash-preview", "gemini-3.1-flash-lite-preview", "gemini-3.1-flash-preview"];
+
+type GeminiSdkError = {
+  status?: number;
+  message?: string;
+  errorDetails?: Array<{
+    "@type"?: string;
+    retryDelay?: string;
+  }>;
+};
+
+type GeminiFinishReason = "MAX_TOKENS" | "STOP" | "SAFETY" | "RECITATION" | string;
+
+function needsContinuation(finishReason: GeminiFinishReason | undefined) {
+  return finishReason === "MAX_TOKENS";
+}
+
+function buildContinuationPrompt(fullPrompt: string, partialAnswer: string) {
+  const tail = partialAnswer.slice(-900);
+
+  return [
+    "Bạn đang viết dở phần luận giải tarot và bị ngắt do giới hạn token.",
+    "Nhiệm vụ: tiếp tục viết phần còn lại ngay sau đoạn đã có, không lặp lại nội dung cũ.",
+    "Nếu đã đủ ý thì chỉ cần viết đoạn kết ngắn gọn, trọn câu.",
+    "",
+    "Bối cảnh gốc:",
+    fullPrompt,
+    "",
+    "Đoạn đã viết đến đây:",
+    tail,
+  ].join("\n");
+}
 
 function sanitizeText(input: string, maxLength: number): string {
   return input.trim().replace(/\s+/g, " ").slice(0, maxLength);
@@ -34,11 +65,54 @@ function buildUserPrompt(payload: Required<ReadingRequest>) {
     "- Dữ liệu các lá bài:",
     cardsText,
     "\nYêu cầu: Hãy viết lời luận giải liền mạch bằng tiếng Việt, đúng cấu trúc markdown đã định trong system prompt.",
+    "Luôn hoàn tất đầy đủ các phần và kết thúc bằng câu trọn nghĩa, không dừng giữa câu.",
   ].join("\n");
 }
 
 function toError(message: string, status: number) {
   return NextResponse.json({ error: message }, { status });
+}
+
+function parseRetryDelaySeconds(value?: string): number | null {
+  if (!value) {
+    return null;
+  }
+
+  const match = value.match(/^(\d+)s$/);
+  if (!match) {
+    return null;
+  }
+
+  const seconds = Number.parseInt(match[1], 10);
+  return Number.isFinite(seconds) && seconds > 0 ? seconds : null;
+}
+
+function getQuotaContext(error: unknown) {
+  const sdkError = error as GeminiSdkError;
+  const status = typeof sdkError?.status === "number" ? sdkError.status : undefined;
+  const message = error instanceof Error ? error.message : "";
+  const isQuotaError =
+    status === 429 || /quota|too many requests|rate limit/i.test(message);
+
+  if (!isQuotaError) {
+    return null;
+  }
+
+  const retryInfo = sdkError?.errorDetails?.find(
+    (item) => item?.["@type"] === "type.googleapis.com/google.rpc.RetryInfo",
+  );
+
+  return {
+    retryAfterSeconds: parseRetryDelaySeconds(retryInfo?.retryDelay),
+  };
+}
+
+function isModelUnsupported(error: unknown) {
+  const sdkError = error as GeminiSdkError;
+  const status = typeof sdkError?.status === "number" ? sdkError.status : undefined;
+  const message = error instanceof Error ? error.message : "";
+
+  return status === 404 || /not found|not supported for generatecontent/i.test(message);
 }
 
 export async function POST(request: Request) {
@@ -75,45 +149,61 @@ export async function POST(request: Request) {
           .filter((card) => card.id && card.name)
       : [];
 
-  if (!question) {
-    return toError("Vui lòng nhập câu hỏi trước khi nhận thông điệp.", 400);
-  }
-
   if (!spreadLabel || cards.length === 0) {
     return toError("Thiếu dữ liệu lá bài để tổng kết.", 400);
   }
 
+  const normalizedQuestion =
+    question || "Không có câu hỏi cụ thể. Hãy luận giải dựa trên năng lượng chung của trải bài.";
+
   const payload: Required<ReadingRequest> = {
-    question,
+    question: normalizedQuestion,
     spreadLabel,
     cards,
   };
 
   const userPrompt = buildUserPrompt(payload);
-  const genAI = new GoogleGenerativeAI(apiKey);
+  const genAI = new GoogleGenAI({ apiKey });
 
   let lastError: unknown;
+  let quotaRetryAfterSeconds: number | null = null;
+  let hasUnsupportedModel = false;
 
   for (const modelName of MODEL_CANDIDATES) {
     try {
-      const model = genAI.getGenerativeModel({
-        model: modelName,
-        systemInstruction: TAROT_SYSTEM_PROMPT,
-      });
+      let promptForModel = userPrompt;
+      let reading = "";
 
-      const result = await model.generateContent({
-        contents: [{ role: "user", parts: [{ text: userPrompt }] }],
-        generationConfig: {
-          temperature: 0.78,
-          topP: 0.95,
-          maxOutputTokens: 1600,
-        },
-      });
+      for (let i = 0; i < 3; i += 1) {
+        const result = await genAI.models.generateContent({
+          model: modelName,
+          contents: [{ role: "user", parts: [{ text: promptForModel }] }],
+          config: {
+            systemInstruction: TAROT_SYSTEM_PROMPT,
+            temperature: 0.78,
+            topP: 0.95,
+            maxOutputTokens: 2400,
+          },
+        });
 
-      const reading = result.response.text().trim();
+        const chunk = result.text?.trim() ?? "";
+        if (chunk) {
+          reading = `${reading}${reading ? "\n\n" : ""}${chunk}`.trim();
+        }
+
+        const finishReason = result.candidates?.[0]?.finishReason as
+          | GeminiFinishReason
+          | undefined;
+
+        if (!needsContinuation(finishReason)) {
+          break;
+        }
+
+        promptForModel = buildContinuationPrompt(userPrompt, reading);
+      }
 
       if (!reading) {
-        return toError("Không nhận được nội dung từ AI.", 502);
+        continue;
       }
 
       return NextResponse.json(
@@ -130,7 +220,39 @@ export async function POST(request: Request) {
       );
     } catch (error) {
       lastError = error;
+      console.error(`Gemini generate failed (${modelName})`, error);
+
+      const quotaContext = getQuotaContext(error);
+      if (quotaContext) {
+        quotaRetryAfterSeconds = quotaContext.retryAfterSeconds ?? quotaRetryAfterSeconds;
+      }
+
+      if (isModelUnsupported(error)) {
+        hasUnsupportedModel = true;
+      }
     }
+  }
+
+  if (quotaRetryAfterSeconds !== null) {
+    const retrySeconds = quotaRetryAfterSeconds;
+    const retryText = retrySeconds > 0 ? ` Vui lòng thử lại sau khoảng ${retrySeconds} giây.` : "";
+
+    return NextResponse.json(
+      {
+        error: `PAL đang chạm giới hạn quota của Gemini.${retryText}`,
+      },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(retrySeconds),
+          "Cache-Control": "no-store",
+        },
+      },
+    );
+  }
+
+  if (hasUnsupportedModel) {
+    return toError("Model hiện tại chưa được hỗ trợ trên project này. PAL đã thử model dự phòng nhưng chưa thành công.", 503);
   }
 
   console.error("Gemini generate failed", lastError);

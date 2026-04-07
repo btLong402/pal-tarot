@@ -3,21 +3,27 @@ import type { SpreadDefinition, SpreadType } from "@/src/types/tarot";
 export const SPREADS: Record<SpreadType, SpreadDefinition> = {
   daily: {
     id: "daily",
-    label: "Rút 1 lá (Daily Card)",
-    description: "Thông điệp nhanh cho ngày mới.",
+    label: "1 lá - Daily",
+    description: "Một thông điệp ngắn, rõ cho nhịp hôm nay.",
     positions: ["Thông điệp hôm nay"],
   },
   "past-present-future": {
     id: "past-present-future",
-    label: "Rút 3 lá (Past - Present - Future)",
-    description: "Nhìn nhận sự việc theo dòng thời gian.",
+    label: "3 lá - Quá khứ / Hiện tại / Tương lai",
+    description: "Đọc sự việc theo dòng chảy thời gian để thấy xu hướng.",
     positions: ["Quá khứ", "Hiện tại", "Tương lai"],
   },
   "problem-cause-solution": {
     id: "problem-cause-solution",
-    label: "Rút 3 lá (Problem - Cause - Solution)",
-    description: "Tìm hướng giải quyết vấn đề cụ thể.",
+    label: "3 lá - Vấn đề / Nguyên nhân / Giải pháp",
+    description: "Tách bạch vấn đề và hướng xử lý một cách thực tế.",
     positions: ["Vấn đề", "Nguyên nhân", "Giải pháp"],
+  },
+  custom: {
+    id: "custom",
+    label: "Custom - Tự chọn số lá",
+    description: "Dành cho trải bài theo câu hỏi, bạn tự chọn số lá cần rút.",
+    positions: ["Lá 1"],
   },
 };
 

@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Spectral } from "next/font/google";
+import { Be_Vietnam_Pro, Noto_Serif } from "next/font/google";
 import "./globals.css";
 
-const bodyFont = Spectral({
+const bodyFont = Be_Vietnam_Pro({
   variable: "--font-body",
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin", "vietnamese"],
 });
 
-const titleFont = Cormorant_Garamond({
+const titleFont = Noto_Serif({
   variable: "--font-title",
   weight: ["500", "600", "700"],
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
 });
 
 export const metadata: Metadata = {
-  title: "PAL Tarot | Không gian chiêm nghiệm",
+  title: "PAL Tarot | Ritual Reading Studio",
   description:
-    "PAL Tarot mang đến trải nghiệm rút bài trực quan với hiệu ứng xáo, lật 3D và thông điệp chiêm nghiệm cá nhân hóa.",
+    "PAL Tarot mang đến trải nghiệm rút bài trực quan với bố cục rõ ràng, hiệu ứng xáo 3D và thông điệp chiêm nghiệm cá nhân hóa.",
 };
 
 export default function RootLayout({

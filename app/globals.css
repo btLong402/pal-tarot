@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #160f0e;
-  --foreground: #f8e9c2;
+  --background: #120b0a;
+  --foreground: #f8e8c6;
 }
 
 @theme inline {
@@ -15,9 +15,25 @@
 body {
   min-height: 100vh;
   margin: 0;
-  background: var(--background);
+  background:
+    radial-gradient(circle at top, rgba(255, 214, 153, 0.12), transparent 34%),
+    radial-gradient(circle at 15% 20%, rgba(223, 138, 72, 0.08), transparent 26%),
+    radial-gradient(circle at 85% 15%, rgba(173, 89, 145, 0.12), transparent 24%),
+    linear-gradient(180deg, #150f0e 0%, #120b0a 100%);
   color: var(--foreground);
   font-family: var(--font-body), serif;
+}
+
+::selection {
+  background: rgba(251, 212, 146, 0.35);
+  color: #fff7e6;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 .font-title {
@@ -29,10 +45,10 @@ body {
   inset: -20%;
   z-index: -2;
   background:
-    radial-gradient(circle at 20% 20%, rgba(252, 211, 146, 0.22), transparent 40%),
-    radial-gradient(circle at 80% 10%, rgba(183, 80, 44, 0.2), transparent 38%),
-    radial-gradient(circle at 60% 80%, rgba(227, 169, 97, 0.16), transparent 42%),
-    linear-gradient(125deg, #1c1312 0%, #160f0e 52%, #120d0d 100%);
+    radial-gradient(circle at 20% 20%, rgba(252, 211, 146, 0.16), transparent 40%),
+    radial-gradient(circle at 82% 12%, rgba(183, 80, 44, 0.2), transparent 38%),
+    radial-gradient(circle at 58% 78%, rgba(227, 169, 97, 0.14), transparent 42%),
+    linear-gradient(125deg, #1c1312 0%, #140d0c 52%, #100a0a 100%);
   animation: ember-drift 18s ease-in-out infinite alternate;
 }
 
@@ -41,7 +57,7 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 40;
-  opacity: 0.2;
+  opacity: 0.06;
   mix-blend-mode: soft-light;
   background-image:
     radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.16) 0.65px, transparent 0.85px),
