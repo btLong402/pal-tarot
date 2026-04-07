@@ -191,7 +191,7 @@ export default function TarotExperience() {
       }, 1200);
 
       timeoutsRef.current.push(spreadTimer);
-    }, 1700);
+    }, 3000);
 
     timeoutsRef.current.push(connectingTimer);
   };
@@ -428,7 +428,16 @@ export default function TarotExperience() {
                 animate={{ rotate: 360, scale: [1, 1.08, 1] }}
                 transition={{ duration: 2.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               />
-              <h3 className="font-title text-2xl text-amber-50">Đang kết nối tâm linh với bạn...</h3>
+                <h3 className="font-title text-2xl text-amber-50">Đang kết nối tâm linh với bạn...</h3>
+                <div className="mt-5 space-y-2 rounded-lg border border-amber-100/16 bg-amber-100/5 p-4">
+                  <p className="text-sm text-amber-100/85">Hãy yên tĩnh và tập trung:</p>
+                  <ul className="space-y-1.5 text-xs text-amber-100/75">
+                    <li>• Hít thở sâu và từng bước</li>
+                    <li>• Tập trung vào câu hỏi của bạn (nếu có)</li>
+                    <li>• Hình dung năng lượng bài Tarot</li>
+                    <li>• Để tâm hồn hướng dẫn quá trình</li>
+                  </ul>
+                </div>
             </div>
           </section>
         ) : null}
