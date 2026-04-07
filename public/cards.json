@@ -1,0 +1,1016 @@
+[
+    {
+        "id": "the-fool",
+        "name": "Gã Khờ",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Khởi đầu mới mang theo sự ngây thơ và niềm tin thuần khiết vào dòng chảy vũ trụ. Hãy buông bỏ những hành trang nặng nề của quá khứ để bước vào vùng đất vô định với trái tim rộng mở và không phán xét.",
+            "love": "Tình yêu đôi khi đòi hỏi một bước nhảy vọt của niềm tin mà không cần những toan tính thiệt hơn. Hãy cho phép bản thân được yêu và trải nghiệm như thể trái tim chưa từng vướng bận tổn thương.",
+            "career": "Một ngã rẽ mới đang vẫy gọi, đòi hỏi sự dũng cảm bước ra khỏi những giới hạn an toàn quen thuộc. Đừng sợ hãi sai lầm, vì mỗi vấp ngã đều là một bài học thiêng liêng giúp linh hồn trưởng thành.",
+            "finance": "Có một sự tươi mới trong các quyết định tài chính, nhưng cũng cần sự tỉnh thức để không bước hụt khỏi vách đá. Hãy chi tiêu theo trực giác nhưng đừng quên nhìn xuống con đường dưới chân."
+        },
+        "image": "/images/cards/the-fool.jpg"
+    },
+    {
+        "id": "the-magician",
+        "name": "Ảo Thuật Gia",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Vũ trụ đã trao cho bạn đủ mọi công cụ hữu hình lẫn vô hình để kiến tạo nên thực tại của riêng mình. Hãy dùng ý chí, sự tĩnh tại và tập trung để biến những ý niệm từ hư không thành hình hài rực rỡ.",
+            "love": "Khả năng giao tiếp và sự kết nối tâm giao đang ở đỉnh cao, giúp bạn dễ dàng chạm đến trạm cảm xúc của đối phương. Hãy chủ động kiến tạo mối quan hệ bạn mong muốn bằng sự chân thành từ tâm thức.",
+            "career": "Đây là lúc mọi kỹ năng và trí tuệ của bạn hội tụ lại để tạo ra những bước tiến đột phá. Hãy tin tưởng vào năng lực tự thân, bạn chính là người làm chủ nguồn lực của mình.",
+            "finance": "Bạn có đủ sự nhạy bén và công cụ để thu hút sự trù phú về mặt vật chất. Việc quản lý khôn ngoan và hành động chủ đích sẽ giúp dòng chảy tài chính sinh sôi."
+        },
+        "image": "/images/cards/the-magician.jpg"
+    },
+    {
+        "id": "the-high-priestess",
+        "name": "Nữ Tư Tế",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Ẩn sâu trong màn sương mù của vô thức là tiếng nói của trực giác đang thầm thì gọi tên bạn. Hãy tạm gác lại những ồn ào ngoài kia, lui về tĩnh lặng và tin tưởng vào trí tuệ thiêng liêng bên trong mình.",
+            "love": "Một tình yêu sâu sắc thường không bộc lộ qua lời nói, mà qua sự thấu cảm không lời giữa hai linh hồn. Hãy kiên nhẫn lắng nghe những cảm xúc ẩn giấu và chờ đợi mọi thứ tự bộc lộ theo thời gian.",
+            "career": "Có những động thái ngầm hoặc thông tin chưa được phơi bày trong công việc hiện tại. Thay vì vội vã hành động, đây là lúc quan sát, chiêm nghiệm và để trực giác dẫn đường.",
+            "finance": "Hãy cẩn trọng với những quyết định tài chính có vẻ ngoài hào nhoáng nhưng thiếu sự vững chắc. Hãy lắng nghe linh cảm của bạn trước khi đặt bút ký hay giao phó tài sản cho người khác."
+        },
+        "image": "/images/cards/the-high-priestess.jpg"
+    },
+    {
+        "id": "the-empress",
+        "name": "Nữ Hoàng",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Mọi sự sống đều nảy mầm từ lòng bao dung và sự chăm sóc vô điều kiện. Hãy ôm ấp bản thân và thế giới xung quanh bằng một tình yêu thương ngập tràn như vẻ đẹp trù phú của Mẹ Thiên Nhiên.",
+            "love": "Mối quan hệ của bạn đang bước vào giai đoạn nảy nở, ngập tràn sự ân cần và dịu dàng. Hãy nuôi dưỡng tình yêu này bằng sự chân thành, cho phép nó tự nhiên đơm hoa kết trái.",
+            "career": "Môi trường làm việc cần sự dung hòa, nuôi dưỡng ý tưởng và hợp tác hơn là sự cạnh tranh gay gắt. Sự sáng tạo của bạn đang vô cùng dồi dào, hãy dùng nó để gieo trồng những dự án mới.",
+            "finance": "Đây là khoảng thời gian của sự sung túc và dòng chảy tiền bạc ổn định. Bạn hoàn toàn có thể tự thưởng cho mình những món đồ mang lại niềm vui và tôn vinh vẻ đẹp của sự sống."
+        },
+        "image": "/images/cards/the-empress.jpg"
+    },
+    {
+        "id": "the-emperor",
+        "name": "Hoàng Đế",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Trật tự và khuôn khổ không phải để gò bó, mà để tạo nền tảng vững chãi cho sự phát triển dài lâu. Hãy kiến tạo ranh giới bảo vệ cho tâm hồn bạn bằng sự điềm tĩnh, kỷ luật và lý trí.",
+            "love": "Tình yêu cần một cấu trúc vững vàng và sự cam kết trách nhiệm để có thể vượt qua sóng gió. Đây là lúc cả hai nên thiết lập những nền móng an toàn và tôn trọng ranh giới của nhau.",
+            "career": "Sự kiên định, khả năng tổ chức và tầm nhìn xa sẽ giúp bạn xây dựng nên một đế chế vững chắc. Đừng ngần ngại bước lên đảm nhận vai trò lãnh đạo và dẫn dắt người khác bằng sự công tâm.",
+            "finance": "Tài chính đòi hỏi sự kiểm soát chặt chẽ, lập kế hoạch rõ ràng và kỷ luật trong chi tiêu. Những khoản đầu tư truyền thống, an toàn và có tính chiến lược lâu dài sẽ mang lại quả ngọt."
+        },
+        "image": "/images/cards/the-emperor.jpg"
+    },
+    {
+        "id": "the-hierophant",
+        "name": "Giáo Hoàng",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Có những lúc linh hồn cần nương tựa vào trí tuệ truyền thống và những giá trị đã được thử lửa qua thời gian. Hãy tìm kiếm sự dẫn dắt từ những bậc thầy, hoặc quay về đào sâu vào niềm tin cốt lõi của chính bạn.",
+            "love": "Mối quan hệ đang hướng tới sự gắn kết sâu sắc, mang tính cam kết cao như hôn nhân hoặc các nghi thức truyền thống. Sự thấu hiểu chung về hệ giá trị tinh thần là chiếc mỏ neo giữ hai người lại với nhau.",
+            "career": "Thành công lúc này đến từ việc tuân thủ các quy tắc, làm việc nhóm và tôn trọng văn hóa tổ chức. Việc tìm kiếm một người cố vấn dày dặn kinh nghiệm sẽ mở ra những nút thắt quan trọng.",
+            "finance": "Hãy chọn những con đường tài chính an toàn, tuân theo sự tư vấn của các chuyên gia hoặc những phương pháp đã được kiểm chứng. Tránh xa những rủi ro phá vỡ nguyên tắc ngay lúc này."
+        },
+        "image": "/images/cards/the-hierophant.jpg"
+    },
+    {
+        "id": "the-lovers",
+        "name": "Tình Nhân",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Tình yêu chân chính trước hết là sự hòa hợp và toàn vẹn trong chính nội tâm rạn nứt của bạn. Mọi lựa chọn quan trọng lúc này cần được xuất phát từ trái tim chân thật và những giá trị cốt lõi nhất.",
+            "love": "Một kết nối sâu sắc về mặt linh hồn đang hiện diện, mang theo sự thấu cảm và đồng điệu tuyệt vời. Hãy mở lòng để trao đi và nhận lại tình yêu trong một sự cân bằng thiêng liêng.",
+            "career": "Bạn đang đứng trước một ngã rẽ đòi hỏi một quyết định mang tính định hình con đường tương lai. Hãy lựa chọn công việc hoặc đối tác cộng hưởng với niềm đam mê sâu thẳm của linh hồn bạn.",
+            "finance": "Mọi quyết định tài chính đều có sự liên kết chặt chẽ với những cam kết và mối quan hệ xung quanh. Hãy trung thực với bản thân và đảm bảo sự công bằng trong các giao dịch chia sẻ."
+        },
+        "image": "/images/cards/the-lovers.jpg"
+    },
+    {
+        "id": "the-chariot",
+        "name": "Cỗ Xe",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Cuộc sống luôn tồn tại những mặt đối lập đang giằng xé, nhưng ý chí kiên định sẽ hóa giải được tất cả. Hãy nắm vững dây cương của cả ánh sáng lẫn bóng tối trong bạn để hiên ngang tiến về phía trước.",
+            "love": "Những xung đột nội tâm hay ngoại cảnh cần được kiểm soát bằng một cái đầu lạnh và trái tim thấu hiểu. Đừng để cảm xúc lấn át, hãy hướng cỗ xe tình cảm đi theo con đường chung của cả hai.",
+            "career": "Sự quyết tâm, tập trung cao độ và tham vọng đang thôi thúc bạn vượt qua mọi chướng ngại vật. Thành công hoàn toàn nằm trong tầm tay nếu bạn không để sự xao nhãng kéo lùi bước chân.",
+            "finance": "Tài chính đang có sự tiến triển mạnh mẽ nhờ những nỗ lực không ngừng nghỉ của bạn. Hãy duy trì kỷ luật với các mục tiêu tài chính, sự tự chủ sẽ dẫn đến một nền tảng vững vàng."
+        },
+        "image": "/images/cards/the-chariot.jpg"
+    },
+    {
+        "id": "strength",
+        "name": "Sức Mạnh",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Sức mạnh thực sự không nằm ở sự chế ngự bạo lực, mà ở lòng trắc ẩn và sự dung thứ vô biên. Hãy thuần phục những phần hoang dại và tổn thương trong bạn bằng một tình yêu kiên nhẫn và dịu dàng.",
+            "love": "Mối quan hệ đòi hỏi sự thấu hiểu bao dung và lòng kiên nhẫn để chữa lành những rạn nứt. Hãy dùng sự ân cần để cảm hóa sự bướng bỉnh, để tình yêu tự tìm thấy sự hòa hợp từ sâu thẳm.",
+            "career": "Khi đối mặt với áp lực hay những đồng nghiệp khó khăn, vũ khí tốt nhất của bạn là sự điềm tĩnh và sự tự tin thầm lặng. Hãy kiểm soát cái tôi và giải quyết vấn đề bằng lòng vị tha.",
+            "finance": "Hãy giữ vững lập trường và kiểm soát những ham muốn chi tiêu bốc đồng. Sự kiên nhẫn trong các khoản đầu tư dài hạn sẽ bảo vệ bạn khỏi những dao động của cảm xúc nhất thời."
+        },
+        "image": "/images/cards/strength.jpg"
+    },
+    {
+        "id": "the-hermit",
+        "name": "Ẩn Sĩ",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Trong một thế giới đầy những thanh âm hối hả, sự lánh đời đôi khi là phương thuốc chữa lành tốt nhất. Hãy xách chiếc đèn lồng của sự chiêm nghiệm đi vào bóng tối nội tâm để tìm lại ánh sáng chân lý.",
+            "love": "Đây là lúc bạn cần một khoảng không gian tĩnh lặng để tự kết nối với chính mình trước khi hướng đến người khác. Sự hiểu thấu bản thân là nền tảng để xây dựng một tình yêu không phụ thuộc.",
+            "career": "Một bước lùi cần thiết để nhìn nhận lại mục đích sâu xa của công việc bạn đang làm. Đôi khi, việc thu mình lại và từ chối những cơ hội xô bồ sẽ giúp bạn tìm thấy hướng đi chân chính.",
+            "finance": "Nên tập trung vào những giá trị tinh thần hơn là chạy theo những lợi ích vật chất ngoài kia. Hãy xem xét lại thói quen chi tiêu một cách thấu đáo và cẩn trọng với các quyết định đầu tư."
+        },
+        "image": "/images/cards/the-hermit.jpg"
+    },
+    {
+        "id": "wheel-of-fortune",
+        "name": "Bánh Xe Số Phận",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Mọi thứ trên đời đều luân chuyển theo quy luật vô thường: trăng tròn rồi khuyết, bĩ cực đến thái lai. Hãy thuận theo dòng chảy của định mệnh với tâm thế bình thản, chấp nhận mọi sự xoay vần.",
+            "love": "Một bước ngoặt lớn do vũ trụ sắp đặt đang đến với đời sống tình cảm của bạn. Dù là sự khởi đầu hay kết thúc, hãy tin rằng đó là điều cần thiết để linh hồn bạn tiếp tục hành trình.",
+            "career": "Có những cơ hội hoặc sự thay đổi bất ngờ ập đến nằm ngoài khả năng kiểm soát của bạn. Việc linh hoạt thích nghi và nắm bắt đúng nhịp điệu của thời cơ sẽ mang lại sự chuyển mình lớn.",
+            "finance": "Vận may tài chính có thể thay đổi một cách đột ngột. Sự trân trọng những gì đang có ở hiện tại sẽ là chiếc neo vững chắc giữ bạn bình an qua những thăng trầm của tiền bạc."
+        },
+        "image": "/images/cards/wheel-of-fortune.jpg"
+    },
+    {
+        "id": "justice",
+        "name": "Công Lý",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Luật nhân quả của vũ trụ luôn vận hành một cách thầm lặng nhưng tuyệt đối chính xác. Hãy đối diện với sự thật một cách minh bạch, tha thứ cho lỗi lầm nhưng đừng trốn tránh trách nhiệm.",
+            "love": "Sự cân bằng giữa cho và nhận là chìa khóa để duy trì một mối quan hệ lành mạnh. Hãy đối xử với đối phương bằng sự công bằng và trung thực để không tạo ra những tổn thương ấm ức.",
+            "career": "Những quyết định công việc, hợp đồng hay đàm phán cần được soi xét dưới lăng kính của sự chính trực. Những gì bạn gieo trồng bằng sự trung thực hôm nay sẽ đem lại thành quả xứng đáng.",
+            "finance": "Đây là lúc giải quyết rõ ràng các khoản nợ nần, sổ sách hoặc các vấn đề pháp lý liên quan đến tiền bạc. Mọi thứ sẽ diễn ra đúng với những gì bạn đã nỗ lực một cách vô tư."
+        },
+        "image": "/images/cards/justice.jpg"
+    },
+    {
+        "id": "the-hanged-man",
+        "name": "Người Treo Ngược",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Sự đình trệ đôi khi là một đặc ân thiêng liêng để ta nhìn thế giới qua một lăng kính hoàn toàn khác. Hãy tự nguyện buông bỏ cái tôi, hy sinh những niềm tin cũ để đón nhận sự giác ngộ tĩnh lặng.",
+            "love": "Đừng cố ép buộc tình yêu đi theo một kịch bản định sẵn. Sự buông lỏng chấp niệm và sẵn sàng chờ đợi sẽ giúp cả hai tự tìm thấy lời giải đáp chân thành nhất cho mối quan hệ.",
+            "career": "Mọi nỗ lực dường như đang dậm chân tại chỗ, nhưng đó là lúc bạn cần thay đổi góc nhìn. Việc lùi lại và chấp nhận một chút hy sinh ngắn hạn sẽ mở ra hướng giải quyết đột phá.",
+            "finance": "Đừng vội vàng đưa ra những khoản đầu tư lớn hay quyết định tài chính vào lúc này. Đôi khi, việc ngừng hành động và thay đổi triết lý về vật chất lại là cách giữ an toàn tốt nhất."
+        },
+        "image": "/images/cards/the-hanged-man.jpg"
+    },
+    {
+        "id": "death",
+        "name": "Cái Chết (Sự Chuyển Hóa)",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Mọi kết thúc đều cưu mang hạt giống của sự tái sinh, như mùa đông buốt giá dọn đường cho mùa xuân. Hãy dũng cảm để những thứ không còn phục vụ cho hành trình của bạn được nhẹ nhàng tan biến.",
+            "love": "Một giai đoạn của mối quan hệ, hoặc một lối mòn trong cách yêu đang đi đến hồi kết. Sự đau buồn của sự chia ly, hay buông bỏ thói quen cũ, là để nhường chỗ cho một tình yêu trưởng thành hơn.",
+            "career": "Công việc hiện tại hoặc định hướng cũ có thể đã hoàn thành sứ mệnh của nó. Hãy dũng cảm đóng lại cánh cửa này, bóng tối của sự chuyển giao sẽ dẫn bạn đến một bình minh mới rực rỡ.",
+            "finance": "Một sự thay đổi lớn về cách bạn kiếm tiền và tiêu dùng đang diễn ra. Đừng níu kéo những khoản đầu tư đã hỏng, hãy chấp nhận cắt bỏ phần thối rữa để bắt đầu xây dựng lại từ đầu."
+        },
+        "image": "/images/cards/death.jpg"
+    },
+    {
+        "id": "temperance",
+        "name": "Tiết Chế",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Nghệ thuật của sự chữa lành nằm ở việc kiên nhẫn pha trộn và dung hòa những mảnh vỡ trái ngược trong tâm hồn. Hãy tìm kiếm điểm cân bằng thanh khiết, nơi cơ thể, tâm trí và linh hồn được xoa dịu.",
+            "love": "Sự hài hòa đạt được khi hai người biết hạ cái tôi xuống và tìm tiếng nói chung thông qua sự thấu cảm. Mối quan hệ này mang lại sự bình an và chữa lành sâu sắc cho đôi bên.",
+            "career": "Tránh xa những quyết định cực đoan, hãy đi con đường trung dung và hợp tác. Sự kiên nhẫn dung hòa các ý kiến trái chiều sẽ giúp dự án phát triển một cách bền vững và êm đẹp.",
+            "finance": "Dòng chảy tiền bạc cần được duy trì ở mức cân bằng, không vung tay quá trán nhưng cũng không tằn tiện kham khổ. Một tâm thái bình thản với vật chất sẽ đem lại sự an tâm tuyệt đối."
+        },
+        "image": "/images/cards/temperance.jpg"
+    },
+    {
+        "id": "the-devil",
+        "name": "Ác Quỷ",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Ta thường tự giam mình trong xiềng xích của những ảo ảnh vật chất, nỗi sợ hãi và khuôn mẫu độc hại. Nhận diện bóng tối nội tâm không chút chối bỏ là bước đầu tiên để linh hồn được cởi trói.",
+            "love": "Có thể đang tồn tại sự lệ thuộc, ghen tuông hay những dục vọng đang che mờ sự thuần khiết của tình yêu. Hãy thành thật với bản thân để cắt đứt sợi xích của những mối quan hệ độc hại.",
+            "career": "Bạn có thể đang cảm thấy bế tắc, bị trói buộc vào một công việc chỉ vì tham vọng hoặc gánh nặng tài chính. Sự thay đổi không nằm ở bên ngoài, mà ở việc bạn dám từ bỏ những nỗi sợ vô hình.",
+            "finance": "Cám dỗ vật chất có thể xúi giục bạn đưa ra những quyết định thiếu minh mẫn. Hãy cẩn trọng với các khoản nợ, thói quen nghiện ngập hay những hứa hẹn sinh lời đầy ảo ảnh."
+        },
+        "image": "/images/cards/the-devil.jpg"
+    },
+    {
+        "id": "the-tower",
+        "name": "Tòa Tháp",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Những nền móng xây trên sự ảo tưởng sẽ bị tia chớp của nhận thức phá sập không thương tiếc. Đừng sợ hãi sự đổ vỡ, vì chính từ đống tro tàn ấy, một chân lý vững chãi hơn sẽ được dựng lên.",
+            "love": "Một sự thật phơi bày hoặc một cuộc khủng hoảng có thể làm rung chuyển nền tảng của mối quan hệ. Dù đau đớn, đó là sự thanh lọc cần thiết để những ảo mộng tan biến, nhường chỗ cho sự thật.",
+            "career": "Sự biến động đột ngột hoặc mất mát vị thế có thể ập đến, phá vỡ mọi kế hoạch bạn đang có. Hãy để những thứ yếu kém sụp đổ, đó là cơ hội lớn để bạn tái thiết lại một sự nghiệp chân chính.",
+            "finance": "Cảnh báo về những tổn thất tài chính không ngờ tới từ những nền tảng thiếu bền vững. Sự sụp đổ này là bài học đắt giá giúp bạn tỉnh thức và xây dựng lại triết lý tài chính từ đầu."
+        },
+        "image": "/images/cards/the-tower.jpg"
+    },
+    {
+        "id": "the-star",
+        "name": "Ngôi Sao",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Sau những đêm giông bão tơi bời, vì sao hi vọng lại thắp sáng bầu trời vô thức thật thanh khiết. Hãy để dòng nước của sự tha thứ rửa trôi mọi muộn phiền, mở ra một chu kỳ của sự bình an.",
+            "love": "Tình yêu đang ở giai đoạn tươi sáng, thuần khiết và ngập tràn niềm tin về một tương lai tốt đẹp. Vết thương cũ đã được chữa lành, để bạn lại yêu thương với một trái tim rạng rỡ.",
+            "career": "Một cảm giác yên bình, tích cực và tràn đầy cảm hứng sáng tạo đang tuôn chảy trong công việc. Những mong muốn và mục tiêu của bạn đang được vũ trụ lắng nghe và dẫn lối.",
+            "finance": "Tài chính dần đi vào quỹ đạo ổn định, mang lại sự nhẹ nhõm sau những ngày căng thẳng. Bạn có thể tin tưởng vào một tương lai sung túc khi giữ vững sự lạc quan và niềm tin vào bản thân."
+        },
+        "image": "/images/cards/the-star.jpg"
+    },
+    {
+        "id": "the-moon",
+        "name": "Mặt Trăng",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Ảo ảnh và nỗi sợ hãi thường lẩn khuất dưới bóng đêm của vô thức, khiến ta lạc lối trong tâm tưởng. Hãy dùng ánh sáng le lói của trực giác để dũng cảm lội qua vùng nước sâu thẳm của tâm hồn.",
+            "love": "Những hiểu lầm, hoang mang và nỗi bất an từ quá khứ đang trỗi dậy che mờ thực tại của mối quan hệ. Hãy chậm lại, khoan đưa ra những kết luận vội vã khi sự thật vẫn còn chìm trong bóng tối.",
+            "career": "Thông tin đang mơ hồ, có những góc khuất trong công việc hoặc ý đồ của người khác chưa được tỏ tường. Đừng hành động dựa trên nỗi sợ, hãy tin vào tiếng nói bên trong để vượt qua màn sương.",
+            "finance": "Đây không phải là thời điểm thích hợp để tin vào vẻ bề ngoài của các cơ hội tài chính. Sự thiếu rõ ràng đòi hỏi bạn phải đào sâu tìm hiểu trước khi giao phó bất kỳ nguồn lực nào."
+        },
+        "image": "/images/cards/the-moon.jpg"
+    },
+    {
+        "id": "the-sun",
+        "name": "Mặt Trời",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Bóng tối đã hoàn toàn lùi bước, nhường chỗ cho sinh khí và niềm vui thuần khiết nhất rạng ngời. Hãy ôm lấy bản thân và cuộc sống này với lòng biết ơn và sự hân hoan rạng rỡ của một đứa trẻ.",
+            "love": "Mối quan hệ đang được sưởi ấm bởi tình yêu chân thành, sự rõ ràng và hạnh phúc viên mãn. Những hiểu lầm được xua tan, chỉ còn lại sự gắn kết tươi sáng và những tiếng cười rộn rã.",
+            "career": "Thành công đang nở rộ, những nỗ lực của bạn được công nhận và tỏa sáng dưới ánh nắng mặt trời. Đây là đỉnh cao của sự tự tin và nguồn năng lượng dồi dào để kiến tạo những kỳ tích.",
+            "finance": "Sự thịnh vượng và sung túc đang chiếu rọi vào khía cạnh tài chính của bạn. Mọi vấn đề về tiền bạc đều được giải quyết một cách rõ ràng, mang lại sự nhẹ nhõm và tự do hoàn toàn."
+        },
+        "image": "/images/cards/the-sun.jpg"
+    },
+    {
+        "id": "judgement",
+        "name": "Phán Xét (Sự Thức Tỉnh)",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Tiếng kèn của sự thức tỉnh đang gọi bạn trỗi dậy từ những tàn tích của vô thức và quá khứ. Đây là lúc để tha thứ, gột rửa những dằn vặt cũ và tái sinh thành phiên bản toàn thiện của chính mình.",
+            "love": "Một khoảng lặng để cùng nhau đánh giá lại toàn bộ hành trình đã qua, từ đó đưa ra quyết định đi tiếp hay dừng lại. Sự tha thứ sâu sắc sẽ hồi sinh tình yêu từ những rạn nứt tưởng chừng không thể vãn hồi.",
+            "career": "Đã đến lúc bạn phải đưa ra những quyết định quan trọng mang tính bước ngoặt, được dẫn dắt bởi tiếng gọi chân chính của linh hồn. Hãy rũ bỏ sự chần chừ, một kỷ nguyên mới trong sự nghiệp đang vẫy gọi.",
+            "finance": "Một sự nhìn nhận lại toàn bộ những sai lầm tài chính trong quá khứ và rút ra những bài học xương máu. Khi bạn thức tỉnh và chịu trách nhiệm, con đường phục hồi sẽ rộng mở."
+        },
+        "image": "/images/cards/judgement.jpg"
+    },
+    {
+        "id": "the-world",
+        "name": "Thế Giới",
+        "arcana": "Major",
+        "suit": "None",
+        "meanings": {
+            "general": "Vòng lặp đã khép lại, mọi bài học đã được thấu hiểu, mang đến một cảm giác trọn vẹn và hòa hợp với vũ trụ. Hãy ăn mừng sự hợp nhất của linh hồn bạn với thế giới, và hân hoan chuẩn bị cho một hành trình mới.",
+            "love": "Tình yêu đã đạt đến sự chín muồi, mang lại cảm giác viên mãn và trọn vẹn như thể hai linh hồn đã tìm thấy ngôi nhà của nhau. Một cái kết đẹp và sự hòa quyện tuyệt đối đang chờ đợi.",
+            "career": "Một dự án dài hạn đã thành công tốt đẹp, những mục tiêu cao nhất đã được chinh phục. Hãy tận hưởng cảm giác hoàn thành này, bạn đã đi một chặng đường dài để đến được đỉnh cao vinh quang.",
+            "finance": "Mọi khoản đầu tư và công sức bạn gieo trồng giờ đã đơm hoa kết trái thành sự vững chắc về tài chính. Đây là lúc tận hưởng cuộc sống trọn vẹn và chia sẻ sự trù phú đó với những người xung quanh."
+        },
+        "image": "/images/cards/the-world.jpg"
+    },
+    {
+        "id": "ace-of-wands",
+        "name": "Ách Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Mầm sống của đam mê và nguồn cảm hứng đang nảy nở từ tàn tro của những ngày cũ. Hãy đón nhận ngọn lửa thiêng liêng này bằng cả trái tim nhiệt thành để thắp sáng con đường phía trước.",
+            "love": "Một tia lửa mới đang được nhen nhóm, mang theo sự rung động mãnh liệt và thuần khiết. Hãy để trái tim tự do dẫn lối, mở lòng đón nhận những cảm xúc nồng nhiệt chưa từng có.",
+            "career": "Đây là lúc một ý tưởng rực rỡ gõ cửa tâm hồn bạn, đòi hỏi sự can đảm để bắt đầu. Hãy mạnh dạn gieo hạt giống sáng tạo này, nó sẽ phát triển thành một cái cây vĩ đại.",
+            "finance": "Cơ hội tài chính mới đang chớm nở, đòi hỏi sự chủ động chớp lấy thời cơ. Những quyết định dũng cảm và hành động đột phá lúc này sẽ khơi thông dòng chảy trù phú."
+        },
+        "image": "/images/cards/ace-of-wands.jpg"
+    },
+    {
+        "id": "two-of-wands",
+        "name": "Hai Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Từ khoảng không tĩnh tại của hiện tại, hãy phóng tầm mắt ra những chân trời xa xăm hơn. Đây là khoảng dừng cần thiết để linh hồn ấp ủ những hoài bão lớn lao trước khi thực sự cất bước.",
+            "love": "Mối quan hệ đang ở giai đoạn cần định hình lại tầm nhìn tương lai của cả hai. Hãy cùng nhau vạch ra một bến bờ chung để tình yêu có không gian rộng mở và phát triển.",
+            "career": "Bạn đã xây dựng được một nền tảng an toàn, nhưng tiếng gọi của thế giới rộng lớn đang thúc giục bạn bước ra ngoài. Đừng giam mình trong vùng an toàn quen thuộc mãi.",
+            "finance": "Một kế hoạch tài chính dài hạn cần được thiết lập ngay lúc này. Sự kiên nhẫn và tầm nhìn chiến lược sẽ giúp bạn giữ vững được sự cân bằng và thu hút thịnh vượng."
+        },
+        "image": "/images/cards/two-of-wands.jpg"
+    },
+    {
+        "id": "three-of-wands",
+        "name": "Ba Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Những hạt giống bạn gieo trồng bằng sự nỗ lực đang vươn mình ra ánh sáng và chờ ngày cập bến. Hãy giữ vững niềm tin, mở rộng tầm nhìn để đón nhận những món quà vũ trụ đang gửi đến.",
+            "love": "Khoảng cách dù là địa lý hay tâm hồn cũng không thể ngăn cản sự gắn kết nếu cả hai cùng hướng về một phía. Hãy kiên nhẫn chờ đợi, tình yêu chân thành sẽ tìm đường trở về trọn vẹn.",
+            "career": "Tầm nhìn của bạn đang dần trở thành hiện thực, những cơ hội hợp tác và mở rộng đang hiện rõ trước mắt. Hãy tự tin bước ra biển lớn, năng lực của bạn đã đủ độ chín muồi.",
+            "finance": "Những nỗ lực đầu tư và làm việc miệt mài trong quá khứ bắt đầu mang lại quả ngọt. Sự trù phú đang trên đường đến, hãy chuẩn bị một tâm thế bình an để đón nhận."
+        },
+        "image": "/images/cards/three-of-wands.jpg"
+    },
+    {
+        "id": "four-of-wands",
+        "name": "Bốn Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Sau những chặng đường dài mỏi mệt, đây là một trạm dừng chân an trú ngập tràn niềm vui và bình yên. Hãy ăn mừng những thành quả nhỏ bé nhất và cho phép tâm hồn được nghỉ ngơi, nạp lại năng lượng.",
+            "love": "Một nền tảng vững chắc và an toàn đã được thiết lập, mang lại sự ấm áp như được trở về nhà. Tình yêu lúc này là bến đỗ bình yên, nơi hai linh hồn được ôm ấp và sẻ chia.",
+            "career": "Sự hòa hợp trong môi trường làm việc và những thành tựu bước đầu đang mang lại một không khí vô cùng tích cực. Đây là lúc tận hưởng niềm vui chung cùng những người đồng hành.",
+            "finance": "Tài chính đang ở mức ổn định và cho phép bạn tận hưởng những khoảnh khắc tụ họp, sẻ chia. Việc chi tiêu cho mái ấm hoặc những trải nghiệm gắn kết gia đình sẽ mang lại phước lành."
+        },
+        "image": "/images/cards/four-of-wands.jpg"
+    },
+    {
+        "id": "five-of-wands",
+        "name": "Năm Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Những xung đột và bất đồng đôi khi chỉ là tiếng vọng của sự khác biệt cần được thấu hiểu. Hãy nhìn nhận những va chạm này như một cách để cái tôi được mài giũa và tìm thấy sự bao dung.",
+            "love": "Sự căng thẳng và những cãi vã nhỏ nhặt đang che lấp đi sự kết nối sâu thẳm. Thay vì cố gắng giành phần thắng, hãy lùi lại để lắng nghe nỗi đau ẩn sau lời nói của đối phương.",
+            "career": "Môi trường làm việc đầy tính cạnh tranh và những luồng ý kiến trái chiều đang thử thách sự kiên nhẫn của bạn. Giữ cái đầu lạnh và trái tim rộng mở sẽ giúp bạn vượt qua mớ hỗn độn này.",
+            "finance": "Có những tranh chấp hoặc sự lộn xộn trong việc quản lý chi tiêu cá nhân đang diễn ra. Hãy tĩnh tâm sắp xếp lại các khoản tài chính để tránh những thất thoát không đáng có."
+        },
+        "image": "/images/cards/five-of-wands.jpg"
+    },
+    {
+        "id": "six-of-wands",
+        "name": "Sáu Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Vinh quang và sự công nhận đã đến sau một hành trình đầy nỗ lực kiên cường. Sự ngợi ca không phải để nuôi dưỡng sự tự mãn, mà để tôn vinh ánh sáng của ý chí bên trong bạn.",
+            "love": "Mối quan hệ đang nhận được sự ủng hộ và ngưỡng mộ từ những người xung quanh. Hãy tự hào về tình yêu hai bạn đang vun đắp, và cùng nhau sẻ chia niềm hạnh phúc lan tỏa này.",
+            "career": "Năng lực của bạn đã được khẳng định, đem lại cho bạn một vị trí xứng đáng và sự nể trọng từ đồng nghiệp. Hãy đón nhận vòng nguyệt quế này bằng sự tự tin và lòng biết ơn sâu sắc.",
+            "finance": "Phần thưởng tài chính đến như một lẽ tất yếu cho những đóng góp và giá trị bạn tạo ra. Sự thành công này là bước đệm vững chắc để bạn tiếp tục thu hút nguồn lực dồi dào hơn."
+        },
+        "image": "/images/cards/six-of-wands.jpg"
+    },
+    {
+        "id": "seven-of-wands",
+        "name": "Bảy Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Dù phải đối mặt với muôn vàn sức ép từ thế giới bên ngoài, hãy dũng cảm bảo vệ những giá trị cốt lõi của linh hồn mình. Vị trí độc tôn luôn đi kèm với sự cô độc, nhưng đó là lúc bản lĩnh được bộc lộ.",
+            "love": "Sẽ có những thử thách hoặc định kiến từ bên ngoài đe dọa đến sự bình yên của mối quan hệ. Đừng chùn bước, hãy cùng nhau đứng chung một chiến tuyến để bảo vệ tình yêu này.",
+            "career": "Bạn đang ở vị trí cần phải đấu tranh để giữ vững những gì mình đã dày công xây dựng. Sự kiên định và niềm tin vào bản thân sẽ là tấm khiên vững chắc nhất chống lại mọi sự cạnh tranh.",
+            "finance": "Hãy bảo vệ tài sản và những quyết định tài chính của bạn trước những lời xúi giục hay áp lực từ người khác. Sự tự chủ và nguyên tắc rõ ràng sẽ giữ cho dòng tiền của bạn được an toàn."
+        },
+        "image": "/images/cards/seven-of-wands.jpg"
+    },
+    {
+        "id": "eight-of-wands",
+        "name": "Tám Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Dòng chảy năng lượng đang cuộn trào mạnh mẽ, vạn vật đang vận động với tốc độ của những mũi tên bay. Đừng chần chừ, hãy thả mình vào nhịp điệu hối hả này để tiến nhanh về phía trước.",
+            "love": "Mọi hiểu lầm sẽ nhanh chóng được tháo gỡ, và tình cảm có sự tiến triển vượt bậc đầy đam mê. Sự giao tiếp chân thành và cởi mở lúc này sẽ phá vỡ mọi rào cản ngăn cách hai tâm hồn.",
+            "career": "Mọi dự án và kế hoạch đang lao đi với tốc độ chóng mặt, mang lại những kết quả tức thì. Bạn cần phải linh hoạt, nhạy bén và duy trì nguồn năng lượng cao để không bị bỏ lại phía sau.",
+            "finance": "Dòng tiền đang luân chuyển nhanh chóng, những khoản đầu tư hoặc thanh toán sẽ sớm được hoàn tất. Hãy theo sát mọi biến động để kịp thời đưa ra những quyết định sinh lời chớp nhoáng."
+        },
+        "image": "/images/cards/eight-of-wands.jpg"
+    },
+    {
+        "id": "nine-of-wands",
+        "name": "Chín Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Những vết sẹo trên cơ thể hay tâm hồn chính là minh chứng hùng hồn nhất cho sự sinh tồn kiên cường của bạn. Dù mệt nhoài, hãy cố gắng thêm một chút nữa, bởi bạn đang đứng rất gần vạch đích.",
+            "love": "Những tổn thương trong quá khứ khiến bạn trở nên rụt rè và dựng lên bức tường phòng vệ trong tình yêu. Hãy hiểu rằng không phải ai cũng sẽ làm bạn đau, đôi khi buông bỏ rào cản là cách chữa lành tốt nhất.",
+            "career": "Dù áp lực công việc đang vắt kiệt sức lực, kinh nghiệm dày dặn sẽ giúp bạn đứng vững trước giông bão. Sự bền bỉ và sức chịu đựng phi thường của bạn sẽ được đền đáp xứng đáng.",
+            "finance": "Bạn đang trong trạng thái cảnh giác cao độ về mặt tài chính do những bài học xương máu trước đó. Sự cẩn trọng là cần thiết, nhưng đừng để nỗi sợ thiếu hụt bóp nghẹt cuộc sống hiện tại."
+        },
+        "image": "/images/cards/nine-of-wands.jpg"
+    },
+    {
+        "id": "ten-of-wands",
+        "name": "Mười Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Đôi khi ta tự chất lên vai mình quá nhiều trách nhiệm mà quên mất linh hồn cũng cần được thở. Đã đến lúc nhìn nhận lại và can đảm buông xuống những gánh nặng không thực sự thuộc về mình.",
+            "love": "Mối quan hệ đang trở nên ngột ngạt khi một người phải gánh vác quá nhiều cảm xúc hoặc trách nhiệm của cả hai. Sự mệt mỏi cần được san sẻ trước khi nó nghiền nát những rung động mong manh.",
+            "career": "Bạn đang bị quá tải bởi khối lượng công việc và những kỳ vọng xa vời. Việc học cách ủy quyền và từ chối những việc không cần thiết là cách duy nhất để cứu lấy sự nghiệp của bạn lúc này.",
+            "finance": "Những gánh nặng tài chính, nợ nần hoặc áp lực chu cấp đang đè nặng lên tâm trí bạn. Hãy tìm cách chia nhỏ vấn đề, cắt giảm các khoản không cần thiết để tìm lại sự nhẹ nhõm cho tinh thần."
+        },
+        "image": "/images/cards/ten-of-wands.jpg"
+    },
+    {
+        "id": "page-of-wands",
+        "name": "Tiểu Đồng Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Một nguồn năng lượng tươi trẻ, tò mò và đầy khao khát khám phá đang thức tỉnh bên trong bạn. Hãy cho phép đứa trẻ nội tâm được tự do trải nghiệm thế giới với đôi mắt lấp lánh sự kinh ngạc.",
+            "love": "Sự xuất hiện của một rung động mới mẻ, mang theo sự thú vị và hồn nhiên không toan tính. Đây là lúc trải nghiệm tình yêu như một chuyến phiêu lưu nhẹ nhàng, không ràng buộc bởi những kỳ vọng.",
+            "career": "Một thông điệp mới, một ý tưởng sáng tạo hoặc một cơ hội học hỏi đang đến với bạn. Đừng e ngại sự non nớt của bản thân, lòng nhiệt huyết chính là ngọn lửa dẫn dắt bạn đi đúng hướng.",
+            "finance": "Một vài tin tức tích cực về tài chính hoặc những cơ hội kiếm tiền quy mô nhỏ đang gõ cửa. Việc mạnh dạn thử nghiệm những cách thức mới sẽ mở ra chân trời trù phú hơn trong tương lai."
+        },
+        "image": "/images/cards/page-of-wands.jpg"
+    },
+    {
+        "id": "knight-of-wands",
+        "name": "Hiệp Sĩ Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Ngọn lửa đam mê cháy bỏng đang thôi thúc bạn hành động một cách quyết liệt và can đảm. Dù hành trình phía trước có cuồng nhiệt và bốc đồng, đó vẫn là những trải nghiệm rực rỡ nhất của thanh xuân.",
+            "love": "Một tình yêu mãnh liệt, cháy bỏng và đầy say mê đang cuốn bạn đi như một cơn lốc. Hãy cẩn trọng để không thiêu rụi cả bản thân và đối phương trong sự nhiệt tình quá mức này.",
+            "career": "Đây là giai đoạn bạn dồn toàn bộ tâm trí và sức lực để bứt phá trong công việc. Sự dũng cảm dấn thân vào những rủi ro có tính toán sẽ mang lại sự thăng tiến ngoạn mục.",
+            "finance": "Hành động nhanh chóng và quyết đoán sẽ giúp bạn chớp lấy những cơ hội sinh lời lớn. Tuy nhiên, hãy kiềm chế sự bốc đồng để không ném tiền vào những cuộc chơi đầy mạo hiểm."
+        },
+        "image": "/images/cards/knight-of-wands.jpg"
+    },
+    {
+        "id": "queen-of-wands",
+        "name": "Nữ Hoàng Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Sự tự tin, rạng rỡ và sức quyến rũ nội tại là món quà bạn tỏa ra để sưởi ấm thế giới xung quanh. Hãy ôm lấy sự độc bản của chính mình, sự độc lập và kiêu hãnh là vẻ đẹp chữa lành mạnh mẽ nhất.",
+            "love": "Mối quan hệ cần sự nuôi dưỡng bằng sự ấm áp, đam mê và sự thành thật không giấu giếm. Khi bạn yêu bản thân đủ đầy, bạn tự nhiên trở thành thỏi nam châm thu hút một tình yêu đích thực.",
+            "career": "Phong thái lãnh đạo đầy cảm hứng và sự nhiệt huyết sẽ giúp bạn lan tỏa năng lượng tích cực đến mọi người. Việc duy trì sự tự tin và dứt khoát sẽ đưa bạn lên vị trí không thể thay thế.",
+            "finance": "Bạn có khả năng thu hút tài chính thông qua sự độc lập và tài năng cá nhân. Hãy dùng trực giác và sự nhạy bén của mình để đưa ra những quyết định mua sắm hoặc đầu tư tôn vinh giá trị bản thân."
+        },
+        "image": "/images/cards/queen-of-wands.jpg"
+    },
+    {
+        "id": "king-of-wands",
+        "name": "Vua Gậy",
+        "arcana": "Minor",
+        "suit": "Wands",
+        "meanings": {
+            "general": "Sự trưởng thành của ý chí giúp bạn hoàn toàn làm chủ ngọn lửa bên trong, biến nó thành tầm nhìn và hành động kiệt xuất. Hãy trở thành người kiến tạo cuộc đời mình bằng sự uy quyền và lòng trượng phu.",
+            "love": "Tình yêu không chỉ là sự đam mê mà còn là sự bảo bọc, dẫn dắt và tôn trọng lẫn nhau. Một mối quan hệ lành mạnh được xây dựng dựa trên sự chín chắn, trung thực và sự vững chãi của cả hai.",
+            "career": "Khả năng lãnh đạo tầm xa và bản lĩnh giải quyết vấn đề đang đưa bạn tới đỉnh cao sự nghiệp. Sự quyết đoán và tinh thần dám nghĩ dám làm sẽ giúp bạn chinh phục mọi chướng ngại vật.",
+            "finance": "Sự sáng suốt và tư duy chiến lược mang lại sự ổn định và dồi dào về mặt vật chất. Bạn có đủ bản lĩnh để điều khiển dòng tiền lớn và tạo ra những giá trị bền vững cho tương lai."
+        },
+        "image": "/images/cards/king-of-wands.jpg"
+    },
+    {
+        "id": "ace-of-cups",
+        "name": "Ách Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Một dòng suối cảm xúc thuần khiết đang tuôn trào, xoa dịu những khô cằn trong tâm hồn. Hãy mở rộng chiếc cốc vô hình trong bạn để đón nhận tình yêu thương vô điều kiện từ vũ trụ.",
+            "love": "Một sự khởi đầu ngập tràn cảm xúc, nơi trái tim rạng rỡ như đóa hoa đang độ xuân thì. Sự chân thành và tình yêu thuần khiết sẽ là phương thuốc xoa dịu mọi vết thương cũ.",
+            "career": "Công việc hiện tại không chỉ mang ý nghĩa vật chất mà còn đong đầy niềm vui và sự thỏa mãn tinh thần. Hãy làm mọi thứ với một trái tim trắc ẩn, dòng chảy sáng tạo sẽ không bao giờ cạn kiệt.",
+            "finance": "Sự đủ đầy về mặt cảm xúc đôi khi quan trọng hơn những con số trong tài khoản. Khi tâm hồn đạt trạng thái bình an và biết ơn, những cơ hội tài chính thuận lợi cũng sẽ tự nhiên chảy đến."
+        },
+        "image": "/images/cards/cups-01.jpg"
+    },
+    {
+        "id": "two-of-cups",
+        "name": "Hai Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Sự giao hòa tuyệt đẹp giữa hai thực thể mang lại sự cân bằng và chữa lành sâu sắc. Sự thấu cảm và sẻ chia chân thành là cầu nối để những trái tim cô đơn tìm thấy nhau trong vũ trụ bao la.",
+            "love": "Mối quan hệ đang ở trạng thái đồng điệu tuyệt đối, nơi cả hai nhìn thấu và ôm ấp trọn vẹn những điểm bất toàn của nhau. Tình yêu này là một sự chữa lành thiêng liêng và cân bằng.",
+            "career": "Sự hợp tác êm đẹp và ăn ý với đối tác hoặc đồng nghiệp đang mang lại những kết quả mỹ mãn. Việc tôn trọng ý kiến và gắn kết tinh thần sẽ tạo ra một sức mạnh cộng hưởng không thể phá vỡ.",
+            "finance": "Những thỏa thuận hoặc hợp đồng tài chính mang tính đôi bên cùng có lợi đang được thiết lập. Sự công bằng và tin tưởng lẫn nhau là chìa khóa để duy trì sự thịnh vượng bền lâu."
+        },
+        "image": "/images/cards/cups-02.jpg"
+    },
+    {
+        "id": "three-of-cups",
+        "name": "Ba Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Niềm vui thực sự sẽ nhân lên vạn lần khi được sẻ chia cùng những tâm hồn đồng điệu. Hãy buông xuống những muộn phiền cá nhân để đắm mình vào vòng kết nối đầy ấm áp của cộng đồng.",
+            "love": "Tình yêu được thăng hoa khi có sự hòa hợp và ủng hộ từ những người bạn, người thân xung quanh. Những buổi gặp gỡ, lễ kỷ niệm sẽ tưới tắm thêm sự tươi mới cho mối quan hệ của hai bạn.",
+            "career": "Môi trường làm việc tràn ngập tiếng cười, sự hỗ trợ và tinh thần đồng đội xuất sắc. Việc cùng nhau ăn mừng những thành tựu nhỏ bé sẽ tạo động lực lớn lao cho chặng đường dài phía trước.",
+            "finance": "Sự dồi dào về tài chính cho phép bạn hào phóng chia sẻ niềm vui với những người yêu thương. Những chi tiêu cho các buổi tiệc tùng, tụ họp sẽ nuôi dưỡng tâm hồn và thắt chặt các mối quan hệ."
+        },
+        "image": "/images/cards/cups-03.jpg"
+    },
+    {
+        "id": "four-of-cups",
+        "name": "Bốn Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Có đôi khi tâm hồn chìm vào sự thờ ơ và chán chường, khước từ mọi vẻ đẹp của thực tại. Sự tĩnh lặng này là cần thiết để nhìn vào bên trong, nhưng đừng để nó làm bạn lỡ mất những món quà vũ trụ đang trao tặng.",
+            "love": "Bạn có thể đang cảm thấy trống rỗng hoặc thất vọng về tình yêu, dẫn đến việc khép chặt lòng mình. Hãy tự hỏi liệu sự thu mình này là để bảo vệ trái tim, hay chỉ là sự cố chấp ôm giữ quá khứ?",
+            "career": "Sự thiếu vắng động lực và cảm giác nhàm chán đang khiến công việc dường như đi vào lối mòn. Đây là lúc cần đánh thức lại niềm đam mê, hoặc dũng cảm mở mắt để nhìn nhận những cơ hội mới đang hiển hiện.",
+            "finance": "Trạng thái không màng thế sự khiến bạn bỏ qua những cơ hội cải thiện tài chính xung quanh. Hãy thôi nhìn chằm chằm vào những thiếu hụt, tập trung vào những nguồn lực bạn đang có trong tay."
+        },
+        "image": "/images/cards/cups-04.jpg"
+    },
+    {
+        "id": "five-of-cups",
+        "name": "Năm Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Niềm đau và sự vỡ vụn là một phần tất yếu để linh hồn được mài giũa và thấu cảm. Đừng mãi chôn vùi trong những chiếc cốc đã đổ, hãy xoay người lại để thấy hy vọng vẫn còn đọng lại phía sau.",
+            "love": "Sự thất vọng hay mất mát trong tình cảm là một vết thương cần thời gian tĩnh dưỡng. Chấp nhận nỗi buồn tột cùng là bước đầu tiên để tha thứ cho đối phương và, quan trọng nhất, tha thứ cho chính mình.",
+            "career": "Một dự án thất bại hay những kỳ vọng không thành khiến bạn rơi vào trạng thái hụt hẫng. Hãy coi đây là một bài học đắt giá, dọn dẹp lại tàn dư để tiếp tục bước đi trên con đường của mình.",
+            "finance": "Có sự hao hụt hay tổn thất về mặt tiền bạc mang lại cảm giác nuối tiếc khôn nguôi. Tuy nhiên, mọi thứ chưa phải là chấm hết, những gì còn lại vẫn đủ để bạn làm lại từ đầu nếu bạn chịu buông bỏ sự nuối tiếc."
+        },
+        "image": "/images/cards/cups-05.jpg"
+    },
+    {
+        "id": "six-of-cups",
+        "name": "Sáu Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Mùi hương của hoài niệm đưa ta tìm về đứa trẻ thuần khiết bên trong, nơi không có toan tính hay tổn thương che lấp. Hãy để sự ngọt ngào của quá khứ sưởi ấm và chữa lành những chông chênh của thực tại.",
+            "love": "Một mối quan hệ có nền tảng từ quá khứ, hoặc sự ngây thơ, vị tha đang hồi sinh ngọn lửa tình yêu. Hãy đối đãi với người thương bằng sự dịu dàng không phán xét như cái cách những đứa trẻ yêu thương nhau.",
+            "career": "Những kinh nghiệm từ thuở sơ khai hoặc những đồng nghiệp cũ có thể mang lại nguồn cảm hứng mới. Đôi khi, việc lùi lại và làm những việc quen thuộc với một tâm thế vui vẻ sẽ giải tỏa mọi áp lực.",
+            "finance": "Có thể có sự hỗ trợ tài chính từ gia đình, nhận được quà tặng hoặc các khoản thừa kế. Sự lưu thông tiền bạc dựa trên lòng tốt và sự biết ơn sẽ mang lại phước lành lâu dài."
+        },
+        "image": "/images/cards/cups-06.jpg"
+    },
+    {
+        "id": "seven-of-cups",
+        "name": "Bảy Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Giữa vô vàn ảo vọng lấp lánh của trần thế, linh hồn dễ bị mờ mắt và lạc lối trong những giấc mơ. Sự tỉnh thức đòi hỏi bạn phải dùng trực giác nhạy bén để chọn ra chiếc cốc chứa đựng chân lý đích thực.",
+            "love": "Bạn đang đứng trước nhiều ngã rẽ hoặc nuôi dưỡng những viễn cảnh huyễn hoặc về một mối quan hệ hoàn hảo. Đừng để những ảo tưởng đẹp đẽ lừa dối bạn khỏi thực tại đa chiều của tình yêu.",
+            "career": "Có quá nhiều lựa chọn hoặc dự định bay bổng khiến bạn không thể tập trung vào một hướng đi cụ thể. Đã đến lúc phải thực tế hóa giấc mơ, chọn lấy một mục tiêu cốt lõi và hành động kiên quyết.",
+            "finance": "Cảnh báo về sự cám dỗ từ những cơ hội làm giàu nhanh chóng nhưng mập mờ. Hãy cẩn trọng đánh giá các phương án tài chính bằng lý trí, tránh những quyết định dựa trên cảm xúc nhất thời."
+        },
+        "image": "/images/cards/cups-07.jpg"
+    },
+    {
+        "id": "eight-of-cups",
+        "name": "Tám Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Có những thứ ta từng trân quý, nhưng nay không còn dung dưỡng cho sự trưởng thành của linh hồn nữa. Sự rời đi trong tĩnh lặng không phải là trốn chạy, mà là lòng can đảm tìm về ánh sáng chân lý bên trong.",
+            "love": "Một sự nhận thức sâu sắc rằng mối quan hệ hiện tại không thể lấp đầy những khoảng trống trong tâm hồn. Việc dũng cảm buông tay là một hành động từ bi, giải thoát cho cả hai khỏi sự kìm kẹp cảm xúc.",
+            "career": "Bạn dường như đã đạt được những thành tựu nhất định, nhưng tận sâu thẳm lại là sự vô nghĩa. Hãy lắng nghe tiếng gọi từ nội tâm, từ bỏ lối mòn quen thuộc để tìm kiếm một sứ mệnh lớn lao hơn.",
+            "finance": "Một sự thay đổi lớn về cách bạn nhìn nhận vật chất; tiền bạc không còn là mục đích sống tối thượng. Sự cắt giảm những nhu cầu dư thừa sẽ đưa bạn đến sự nhẹ nhõm và tự do đích thực."
+        },
+        "image": "/images/cards/cups-08.jpg"
+    },
+    {
+        "id": "nine-of-cups",
+        "name": "Chín Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Khi những khát khao nội tâm đã được lấp đầy, linh hồn đạt đến trạng thái của sự tự mãn nguyện và trọn vẹn. Hãy đắm chìm trong sự đủ đầy này với lòng biết ơn sâu sắc về một cuộc đời viên mãn.",
+            "love": "Tình yêu đang ở thời điểm đong đầy hạnh phúc, mọi mong ước về một nửa kia dường như đã trở thành hiện thực. Bạn không cần phải tìm kiếm đâu xa, bởi sự bình yên đã nảy nở ngay trong chính mối quan hệ này.",
+            "career": "Những nỗ lực không ngừng nghỉ cuối cùng cũng đưa bạn đến đỉnh vinh quang của sự thỏa mãn. Cảm giác hài lòng với những gì đang làm là món quà tuyệt vời nhất cho con đường sự nghiệp của bạn.",
+            "finance": "Sự thịnh vượng về vật chất đã đến, mang lại cho bạn cảm giác yên tâm và khả năng tận hưởng mọi lạc thú của cuộc sống. Hãy chiêu đãi bản thân như một phần thưởng xứng đáng cho quá trình lao động dài lâu."
+        },
+        "image": "/images/cards/cups-09.jpg"
+    },
+    {
+        "id": "ten-of-cups",
+        "name": "Mười Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Cầu vồng rực rỡ hiện lên sau những cơn mưa, biểu tượng cho hạnh phúc dung dị và sự hợp nhất của những tâm hồn. Một bến đỗ thiêng liêng, nơi tình yêu thương thuần khiết lan tỏa không biên giới.",
+            "love": "Mối quan hệ đã chạm đến độ sâu sắc và gắn kết như một mái ấm thực sự. Sự hòa hợp, tin tưởng và yêu thương vô điều kiện là sợi dây nối kết vĩnh cửu giữa hai tâm hồn đã từng tổn thương.",
+            "career": "Môi trường công việc giống như một gia đình thứ hai, nơi mọi người hỗ trợ và tôn trọng lẫn nhau một cách chân thành. Sự đồng lòng và chung một tầm nhìn mang lại thành công vô cùng bền vững.",
+            "finance": "Một cảm giác an toàn và đủ đầy về mặt vật chất, bảo bọc cho cả gia đình và những người thân yêu. Tiền bạc lúc này đóng vai trò như một phương tiện để lan tỏa hạnh phúc và sự bình an."
+        },
+        "image": "/images/cards/cups-10.jpg"
+    },
+    {
+        "id": "page-of-cups",
+        "name": "Tiểu Đồng Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Một hạt mầm của trí tưởng tượng và linh cảm mỏng manh đang rập rờn gõ cửa trái tim bạn. Hãy đón nhận những cảm xúc trong trẻo ấy bằng sự hồn nhiên, cho phép trực giác dịu dàng dẫn dắt bước chân.",
+            "love": "Một lời tỏ tình, một cử chỉ lãng mạn hay sự nhen nhóm của một tình yêu vô tư lự đang đến. Đừng dùng lý trí để phân tích, hãy để trái tim rung lên những nhịp điệu nguyên sơ nhất.",
+            "career": "Sự sáng tạo vô hạn và nguồn cảm hứng nghệ thuật đang tuôn chảy mạnh mẽ. Việc tiếp cận công việc bằng một tâm hồn nhạy cảm và khác biệt sẽ mở ra những cánh cửa đầy màu sắc.",
+            "finance": "Bạn có thể đang chi tiêu cho những sở thích mang tính tinh thần, nghệ thuật hoặc cái đẹp. Dù là những khoản chi nhỏ, nhưng nếu nó nuôi dưỡng tâm hồn bạn, nó hoàn toàn xứng đáng."
+        },
+        "image": "/images/cards/cups-11.jpg"
+    },
+    {
+        "id": "knight-of-cups",
+        "name": "Hiệp Sĩ Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Sự hòa quyện giữa hành động và cảm xúc tạo nên một người lữ khách đi theo tiếng gọi của vẻ đẹp và lý tưởng. Hãy can đảm cưỡi sóng vươn tới những ước mơ lãng mạn nhất đang vẫy gọi tâm hồn.",
+            "love": "Một tình yêu lãng mạn, nên thơ và đong đầy những lời lẽ ngọt ngào đang đến gần. Đây là lúc trao đi những cảm xúc tận đáy lòng, nhưng đừng quên giữ cho đôi chân chạm đất trước những mộng tưởng.",
+            "career": "Bạn đang được thôi thúc làm những công việc mang tính ngoại giao, nghệ thuật hoặc đòi hỏi sự thấu cảm sâu sắc. Sự duyên dáng và khả năng thấu hiểu người khác sẽ mang lại những thỏa thuận êm đẹp.",
+            "finance": "Đừng để những cảm hứng viển vông lấn át lý trí trong các quyết định chi tiêu hay đầu tư. Hãy đảm bảo những kế hoạch tài chính của bạn không chỉ đẹp trên ý tưởng mà còn thực tế khi triển khai."
+        },
+        "image": "/images/cards/cups-12.jpg"
+    },
+    {
+        "id": "queen-of-cups",
+        "name": "Nữ Hoàng Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Đại dương của vô thức sâu thẳm được ôm ấp bởi lòng từ bi và sự thấu cảm vô bờ. Năng lượng chữa lành cao cả nhất đến từ khả năng lắng nghe và dung chứa mọi nỗi đau của trần thế mà không phán xét.",
+            "love": "Tình yêu được xây dựng trên nền tảng của sự thấu hiểu tâm lý và lòng vị tha tuyệt đối. Mối quan hệ trở thành một không gian an toàn, nơi mọi yếu đuối được phơi bày và được xoa dịu bằng sự dịu dàng.",
+            "career": "Trực giác mạnh mẽ và sự nhạy cảm giúp bạn dễ dàng nắm bắt tâm lý đồng nghiệp hay đối tác. Lãnh đạo bằng tình yêu thương và sự chăm sóc sẽ tạo ra một tập thể trung thành và gắn kết sâu sắc.",
+            "finance": "Một cách tiếp cận tài chính mang tính bảo bọc, an toàn và trực giác. Việc sử dụng tiền bạc để giúp đỡ người khác hoặc đầu tư vào các dịch vụ chữa lành, tinh thần sẽ đem lại sự cân bằng trọn vẹn."
+        },
+        "image": "/images/cards/cups-13.jpg"
+    },
+    {
+        "id": "king-of-cups",
+        "name": "Vua Cốc",
+        "arcana": "Minor",
+        "suit": "Cups",
+        "meanings": {
+            "general": "Bậc thầy của sự tĩnh tại giữa những cơn bão lòng, biến biển cả cảm xúc hỗn mang thành mặt hồ thu lặng sóng. Sự trưởng thành của tâm thức là biết kiểm soát nỗi đau mà không làm chai sạn lòng trắc ẩn.",
+            "love": "Một tình yêu sâu sắc, bền vững, được dẫn dắt bởi sự bao dung và sự ổn định về mặt cảm xúc. Cả hai biết cách kiểm soát những cơn thịnh nộ và đối xử với nhau bằng sự tôn trọng, điềm đạm nhất.",
+            "career": "Bạn giải quyết mọi xung đột công việc bằng một cái đầu lạnh nhưng với một trái tim ấm áp. Sự ngoại giao khéo léo, trí tuệ xúc cảm đỉnh cao là chìa khóa để bạn giữ vững sự kính trọng từ mọi người.",
+            "finance": "Sự cân bằng hoàn hảo giữa lý trí trong việc quản lý tài sản và lòng rộng lượng khi cần chia sẻ. Bạn tạo ra của cải không chỉ để tích lũy, mà để kiến tạo nên một cuộc sống bình an cho bản thân và cộng đồng."
+        },
+        "image": "/images/cards/cups-14.jpg"
+    },
+    {
+        "id": "ace-of-swords",
+        "name": "Ách Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Thanh kiếm của chân lý đã chẻ đôi màn sương mờ ảo, mang lại một sự minh mẫn tuyệt đối cho tâm thức. Hãy dùng sự thông tuệ này để cắt đứt những trói buộc cũ, dọn đường cho một luồng sinh khí mới mẻ và trong trẻo.",
+            "love": "Sự thật đôi khi mang vẻ ngoài lạnh lùng sắc lẹm, nhưng nó cần thiết để phá vỡ những huyễn hoặc trong tình cảm. Một cuộc đối thoại thẳng thắn, không né tránh sẽ cứu rỗi mối quan hệ khỏi những dằn vặt âm ỉ.",
+            "career": "Một tia sáng của sự thấu suốt đột ngột lóe lên, giúp bạn nhìn thấu bản chất của mọi vấn đề phức tạp. Hãy nắm bắt ý tưởng đột phá này và hành động với một lập trường vô cùng kiên định.",
+            "finance": "Đã đến lúc cần phải rạch ròi, minh bạch hóa mọi sổ sách và các mối quan hệ tiền bạc. Việc ra quyết định dựa trên lý trí sắc bén, cắt bỏ những khoản chi lãng phí sẽ thiết lập lại trật tự tài chính."
+        },
+        "image": "/images/cards/ace-of-swords.jpg"
+    },
+    {
+        "id": "two-of-swords",
+        "name": "Hai Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Bạn đang đứng lặng giữa ngã ba đường, tự bịt mắt mình để trốn tránh một quyết định khó khăn. Hãy hiểu rằng sự trì hoãn không làm nỗi đau biến mất, mà chỉ tước đi sức mạnh tự do của linh hồn.",
+            "love": "Có một rào cản vô hình hoặc một sự bế tắc đang hiện diện khi cả hai đều chối bỏ cảm xúc thật của mình. Lớp vỏ bọc phòng vệ cần được gỡ xuống để sự thấu cảm có thể thực sự chạm vào nhau.",
+            "career": "Sự giằng xé giữa hai lựa chọn đang khiến bạn rơi vào trạng thái tê liệt hành động. Hãy lui về tĩnh tại, lắng nghe tiếng nói tĩnh lặng bên trong thay vì bị xáo trộn bởi những ồn ào bên ngoài.",
+            "finance": "Một tình trạng đình trệ khi bạn không dám đối diện với những sự thật về tình hình tài chính của mình. Chấp nhận mở mắt nhìn vào những thiếu sót là bước đầu tiên để khôi phục lại sự cân bằng."
+        },
+        "image": "/images/cards/two-of-swords.jpg"
+    },
+    {
+        "id": "three-of-swords",
+        "name": "Ba Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Nỗi đau xé lòng là một sự thật trần trụi của kiếp nhân sinh, nhưng chính qua những vết nứt ấy, ánh sáng mới có thể lọt vào. Hãy ôm ấp sự vỡ vụn này bằng lòng từ bi, cho phép những giọt nước mắt được thanh tẩy tâm hồn.",
+            "love": "Sự chia ly, phản bội hay những lời nói gây tổn thương đang để lại một vết sẹo sâu sắc. Đừng chối bỏ nỗi đau, việc đi xuyên qua nó là cách duy nhất để trái tim học được cách lành lặn trở lại.",
+            "career": "Một môi trường làm việc độc hại, sự chỉ trích hoặc một dự án thất bại khiến bạn tổn thương sâu sắc. Hãy buông bỏ những kỳ vọng đã vỡ, lấy sự tĩnh tại để chữa lành cái tôi đang rỉ máu.",
+            "finance": "Những mất mát về vật chất hay những quyết định sai lầm đang mang lại sự muộn phiền cay đắng. Nỗi buồn này là một bài học đắt giá, nhắc nhở bạn về sự vô thường của mọi của cải thế gian."
+        },
+        "image": "/images/cards/three-of-swords.jpg"
+    },
+    {
+        "id": "four-of-swords",
+        "name": "Bốn Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Sau những cuộc chiến khốc liệt của tâm trí, linh hồn khao khát một khoảng lặng thiêng liêng để được ngơi nghỉ. Việc lui về nương náu trong sự tĩnh mịch không phải là bỏ cuộc, mà là để tịnh dưỡng và phục hồi sinh khí.",
+            "love": "Mối quan hệ đang cần một khoảng không gian riêng tư, tạm gác lại mọi tranh cãi để đôi bên được xoa dịu. Sự im lặng lúc này là phương thuốc nhiệm màu giúp cả hai tái tạo lại năng lượng yêu thương.",
+            "career": "Áp lực công việc đã rút cạn sức lực của bạn, dấn thân thêm lúc này chỉ mang lại sự kiệt quệ. Xin hãy cho phép bản thân được nghỉ ngơi thực sự, mọi dự định hãy để dành khi tâm trí đã đủ sáng trong.",
+            "finance": "Không nên đưa ra bất kỳ quyết định mua bán hay đầu tư nào trong khoảng thời gian này. Hãy đóng băng các hoạt động tài chính không cần thiết, lui về quan sát và bảo toàn những gì đang có."
+        },
+        "image": "/images/cards/four-of-swords.jpg"
+    },
+    {
+        "id": "five-of-swords",
+        "name": "Năm Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Sự cố chấp giành chiến thắng bằng mọi giá thường để lại một bãi chiến trường ngổn ngang những tâm hồn hoang tàn. Đôi khi, buông kiếm và bước đi lại là hành động của một kẻ mạnh thực sự, bảo vệ sự bình an nội tại.",
+            "love": "Những trận cãi vã đẫm cái tôi đã để lại vết thương sâu sắc, dù có thắng trong lời nói thì bạn cũng đã thua trong tình yêu. Việc hạ mình và nói lời xin lỗi là cách duy nhất để hàn gắn sự đứt gãy này.",
+            "career": "Môi trường công sở đầy rẫy sự đố kỵ, chơi xấu và những cuộc đối đầu vô nghĩa. Đừng để bản thân bị cuốn vào vòng xoáy độc hại đó, hãy chọn sự thoái lui trong tĩnh lặng để bảo toàn khí chất.",
+            "finance": "Có những tổn thất tài chính do sự gian dối hoặc xung đột lợi ích gây ra. Đừng cố gắng trả đũa hay đòi lại những thứ đã mất bằng sự thù hận, hãy buông bỏ để dòng chảy tài chính mới được khơi thông."
+        },
+        "image": "/images/cards/five-of-swords.jpg"
+    },
+    {
+        "id": "six-of-swords",
+        "name": "Sáu Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Quá trình rời bỏ bờ bến của những đớn đau để xuôi dòng về nơi bình yên vắng lặng luôn chất chứa những nỗi buồn rười rượi. Hãy mang theo những bài học quý giá làm hành trang, bóng tối đang lùi dần lại phía sau lưng bạn.",
+            "love": "Hai người đang cùng nhau nỗ lực vượt qua những giông bão của quá khứ để tiến tới một sự thấu hiểu sâu lắng hơn. Dù vẫn còn những tàn dư của sự tổn thương, nhưng hướng đi này ngập tràn hy vọng chữa lành.",
+            "career": "Một sự chuyển giao cần thiết, có thể là đổi việc hoặc rời bỏ một môi trường không còn dung dưỡng cho tâm hồn bạn. Dòng nước đang tĩnh lại, hứa hẹn một chặng đường phía trước bớt chông gai hơn.",
+            "finance": "Những rắc rối và nợ nần đang dần được tháo gỡ một cách chậm rãi nhưng chắc chắn. Sự phục hồi cần có thời gian, hãy kiên nhẫn để dòng tiền trở lại trạng thái lưu thông êm ả."
+        },
+        "image": "/images/cards/six-of-swords.jpg"
+    },
+    {
+        "id": "seven-of-swords",
+        "name": "Bảy Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Có những sự lẩn tránh và lớp mặt nạ ta mang để tự vệ trước một thế giới khắc nghiệt. Hãy trung thực nhìn nhận lại xem liệu bạn đang bảo vệ mình khôn ngoan, hay đang lừa dối chính ánh sáng bên trong mình?",
+            "love": "Một sự thiếu minh bạch hoặc những điều giấu giếm đang ăn mòn gốc rễ của niềm tin. Để mối quan hệ được chữa lành, cả hai phải dám can đảm đối diện với những sự thật dù là trần trụi nhất.",
+            "career": "Đôi khi làm việc một cách thầm lặng và tự lực cánh sinh lại là cách tốt nhất để bảo vệ ý tưởng của bạn. Hãy cẩn trọng với những lời hứa hẹn sáo rỗng, dùng chiến lược khôn khéo để lách qua những rào cản.",
+            "finance": "Cần nâng cao cảnh giác với những mánh khóe lừa đảo, những điều khoản hợp đồng mập mờ có thể làm thất thoát tài sản. Sự cẩn trọng và kiểm tra tỉ mỉ lúc này là bức tường thành vững chắc nhất."
+        },
+        "image": "/images/cards/seven-of-swords.jpg"
+    },
+    {
+        "id": "eight-of-swords",
+        "name": "Tám Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Bạn đang tự trói buộc mình trong nhà tù của những nỗi sợ hãi vô hình và định kiến hạn hẹp. Hãy nhận ra rằng dải băng bịt mắt thực chất rất lỏng lẻo, sức mạnh tự do luôn nằm sẵn trong ý chí của bạn.",
+            "love": "Cảm giác ngột ngạt, bị kìm kẹp hoặc bất lực trong mối quan hệ xuất phát từ việc bạn không dám lên tiếng bảo vệ mình. Hãy dũng cảm tháo bỏ rào cản tâm lý, bạn xứng đáng với một tình yêu tự do và tôn trọng.",
+            "career": "Bạn cảm thấy bế tắc, dường như mọi ngả đường thăng tiến đều bị bịt kín. Thực ra, sự giới hạn nằm ở góc nhìn của bạn; chỉ cần thay đổi tư duy, một lối thoát bất ngờ sẽ hiển lộ.",
+            "finance": "Sự lo âu thái quá về tiền bạc khiến bạn mất đi khả năng nhìn nhận những cơ hội trước mắt. Thay vì chìm trong nỗi sợ thiếu hụt, hãy dùng lý trí để phân tích và tìm ra phương án giải quyết từng bước một."
+        },
+        "image": "/images/cards/eight-of-swords.jpg"
+    },
+    {
+        "id": "nine-of-swords",
+        "name": "Chín Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Những cơn ác mộng và sự giằng xé nội tâm đang bóp nghẹt tâm hồn bạn trong đêm tối đơn độc. Phần lớn nỗi đau này là do tâm trí tự thêu dệt, hãy bao dung với chính mình để ánh sáng bình minh xua tan ảo ảnh.",
+            "love": "Sự dằn vặt vì những lỗi lầm trong quá khứ hoặc nỗi lo ân không đáy đang phá hủy sự bình yên của bạn. Hãy chia sẻ nỗi niềm này với người thương, sự thấu hiểu từ họ sẽ là cái ôm xoa dịu những đêm thức trắng.",
+            "career": "Căng thẳng tột độ và sự lo sợ thất bại đang bào mòn tinh thần và thể chất của bạn. Không có khó khăn nào là tận cùng, việc buông bỏ bớt tính cầu toàn sẽ giúp bạn tìm lại được sự thanh thản.",
+            "finance": "Nỗi ám ảnh về nợ nần hoặc khủng hoảng tài chính đang làm tâm trí bạn rối bời. Việc lo lắng không tạo ra tiền bạc, sự bình tâm và tìm kiếm sự hỗ trợ từ người khác mới là chìa khóa tháo gỡ vấn đề."
+        },
+        "image": "/images/cards/nine-of-swords.jpg"
+    },
+    {
+        "id": "ten-of-swords",
+        "name": "Mười Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Đây là vực thẳm của sự gục ngã, nơi mọi hy vọng dường như bị đâm nát không thương tiếc. Nhưng xin hãy nhớ, khi đã chạm đến tận cùng của đáy sâu, hướng đi duy nhất còn lại là hướng lên đón ánh bình minh.",
+            "love": "Sự phản bội hay một sự thật tàn nhẫn đã đâm một đòn chí mạng vào niềm tin của bạn. Đừng cố gắng níu kéo, hãy chấp nhận cái chết của mối quan hệ độc hại này để giải thoát cho linh hồn được tái sinh.",
+            "career": "Một chu kỳ công việc đầy đau đớn và thất bại đã chính thức khép lại. Dù cái kết có nghiệt ngã đến đâu, đó là sự chấm dứt cần thiết để bạn ngừng chịu đựng và mở ra một chương mới rực rỡ hơn.",
+            "finance": "Mọi kế hoạch tài chính đã hoàn toàn sụp đổ, mang lại sự mất mát không thể vãn hồi. Chấp nhận buông tay những gì không thuộc về mình là cách nhanh nhất để rũ bùn đứng dậy làm lại từ đầu."
+        },
+        "image": "/images/cards/ten-of-swords.jpg"
+    },
+    {
+        "id": "page-of-swords",
+        "name": "Tiểu Đồng Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Một cơn gió sắc lạnh của sự hiếu kỳ đang thổi qua, mang theo khát khao bóc trần những tầng hầm của chân lý. Hãy duy trì sự tỉnh táo và tư duy linh hoạt như một đứa trẻ luôn tò mò trước vạn vật.",
+            "love": "Mối quan hệ đang được khơi gợi bởi những cuộc trò chuyện trí tuệ, sắc sảo và đôi khi mang tính thử thách cái tôi. Hãy giữ cho sự thẳng thắn không biến thành sự phán xét để tình yêu được phát triển tự nhiên.",
+            "career": "Đây là lúc thu thập thông tin, học hỏi không ngừng và dùng lý trí sắc bén để phân tích mọi dữ liệu. Khả năng quan sát nhạy bén sẽ giúp bạn phát hiện ra những cơ hội lẩn khuất mà người khác bỏ lỡ.",
+            "finance": "Bạn đang trở nên thận trọng và cảnh giác cao độ với mọi dòng tiền ra vào. Sự sắc sảo trong việc nghiên cứu các hợp đồng và tin tức tài chính sẽ giúp bạn tránh được những cái bẫy tinh vi."
+        },
+        "image": "/images/cards/page-of-swords.jpg"
+    },
+    {
+        "id": "knight-of-swords",
+        "name": "Hiệp Sĩ Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Hành động nhanh như chớp và ý chí kiên định đang thôi thúc bạn lao vào trung tâm của cơn bão. Dù dũng mãnh bảo vệ chân lý, hãy nhớ rằng thanh kiếm không có lòng trắc ẩn sẽ dễ dàng làm tổn thương vạn vật.",
+            "love": "Sự thẳng thừng thái quá hoặc những quyết định chóng vánh có thể gây ra những cuộc cãi vã dữ dội. Hãy chậm lại một nhịp, dùng sự thấu hiểu thay vì sự công kích để giải quyết những mâu thuẫn lứa đôi.",
+            "career": "Sự quyết đoán, tập trung cao độ và không ngại va chạm đang giúp bạn vượt qua mọi chướng ngại. Tuy nhiên, sự hiếu thắng bốc đồng có thể vô tình tạo ra những kẻ thù ngầm trong môi trường làm việc.",
+            "finance": "Hành động chớp nhoáng và tư duy logic sẽ mang lại những quyết định tài chính đột phá. Nhưng hãy cẩn trọng, tốc độ quá nhanh có thể khiến bạn bỏ qua những rủi ro ngầm ẩn phía sau lợi nhuận."
+        },
+        "image": "/images/cards/knight-of-swords.jpg"
+    },
+    {
+        "id": "queen-of-swords",
+        "name": "Nữ Hoàng Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Từ trong những đớn đau của quá khứ, bạn đã tôi luyện nên một trí tuệ minh triết và một cái nhìn xuyên thấu mọi ảo ảnh. Sự độc lập, tự tôn và lòng trắc ẩn giấu kín sau vẻ ngoài lạnh lùng chính là vẻ đẹp tối thượng.",
+            "love": "Bạn yêu cầu một mối quan hệ minh bạch, nơi sự thật và sự tôn trọng ranh giới cá nhân được đặt lên hàng đầu. Đừng ngại chia sẻ sự mềm yếu bên trong, sự tổn thương được phơi bày cũng là một dạng của sức mạnh.",
+            "career": "Sự sắc sảo, công tâm và khả năng đưa ra những lời khuyên khách quan giúp bạn trở thành một điểm tựa vững chắc. Phong thái lãnh đạo bằng lý trí sắc bén sẽ loại bỏ được mọi sự hỗn loạn trong tổ chức.",
+            "finance": "Việc quản lý tài chính đòi hỏi sự minh bạch, rành mạch và hoàn toàn không để cảm xúc xen vào. Bạn có đủ sự khôn ngoan để tự thiết lập sự độc lập về vật chất mà không cần dựa dẫm vào ai."
+        },
+        "image": "/images/cards/queen-of-swords.jpg"
+    },
+    {
+        "id": "king-of-swords",
+        "name": "Vua Kiếm",
+        "arcana": "Minor",
+        "suit": "Swords",
+        "meanings": {
+            "general": "Đỉnh cao của tâm trí là khả năng duy trì sự tĩnh lặng tuyệt đối để vạch ra những ranh giới của sự thật và công lý. Quyền uy thực sự không đến từ sự độc đoán, mà từ trí tuệ sâu rộng và một đạo đức vững vàng.",
+            "love": "Tình yêu được xây dựng trên sự tôn trọng lý tưởng, sự trưởng thành trong giao tiếp và những cam kết có tính trách nhiệm cao. Sự vững chãi và điềm tĩnh của bạn là mỏ neo an toàn cho những cảm xúc của đối phương.",
+            "career": "Bạn hoàn toàn làm chủ tình hình bằng tầm nhìn bao quát, sự logic và khả năng phán đoán xuất chúng. Việc thực thi các quy định một cách công bằng và liêm chính sẽ củng cố vững chắc vị thế lãnh đạo của bạn.",
+            "finance": "Khả năng phân tích chuyên sâu và kinh nghiệm dày dặn giúp bạn kiểm soát mọi rủi ro tài chính. Những khoản đầu tư mang tính dài hạn, tuân thủ pháp luật và có tính kỷ luật cao sẽ mang lại thành quả to lớn."
+        },
+        "image": "/images/cards/king-of-swords.jpg"
+    },
+    {
+        "id": "ace-of-pentacles",
+        "name": "Ách Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Một hạt mầm của sự trù phú và ổn định vừa được gieo xuống nền đất hiền hòa. Hãy trân trọng mối liên kết với vật chất và cơ thể này, nuôi dưỡng nó bằng sự kiên nhẫn để đón chờ một cái cây vĩ đại.",
+            "love": "Tình yêu đang ở giai đoạn khởi đầu đầy thực tế, vững chãi và mang lại cảm giác vô cùng an toàn. Đây là một kết nối hứa hẹn sự bền lâu, nơi đôi bên cùng nhau xây dựng nên một nền móng vững chắc.",
+            "career": "Một cơ hội làm việc mới, một dự án kinh doanh hoặc một lời đề nghị hấp dẫn đang gõ cửa. Đây là lúc thực tế hóa mọi ý tưởng, đặt những viên gạch đầu tiên cho một sự nghiệp thành công rực rỡ.",
+            "finance": "Dòng chảy của sự thịnh vượng đang đổ về, có thể là một khoản thu nhập mới, một món quà giá trị hoặc một khoản đầu tư sinh lời. Hãy đón nhận phước lành này bằng lòng biết ơn sâu sắc."
+        },
+        "image": "/images/cards/ace-of-pentacles.jpg"
+    },
+    {
+        "id": "two-of-pentacles",
+        "name": "Hai Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Cuộc sống là một vũ điệu bất tận của sự thích nghi và luân chuyển giữa những mặt đối lập. Hãy giữ cho đôi chân uyển chuyển và tâm trí thả lỏng, sự linh hoạt là cách tốt nhất để hòa nhịp cùng dòng chảy vô thường.",
+            "love": "Việc dung hòa giữa tình yêu, công việc và các trách nhiệm khác đang đòi hỏi sự nỗ lực từ cả hai. Hãy uyển chuyển san sẻ gánh nặng cho nhau, biến sự bận rộn thành một điệu nhảy chung đầy thấu cảm.",
+            "career": "Bạn đang phải xử lý cùng lúc nhiều dự án, vai trò hoặc tìm cách xoay sở với quỹ thời gian hạn hẹp. Sự linh hoạt, nhạy bén và khả năng quản lý xuất sắc sẽ giúp bạn duy trì trạng thái cân bằng hoàn hảo.",
+            "finance": "Sự luân chuyển dòng tiền đang ở mức độ cao, yêu cầu bạn phải liên tục điều chỉnh các khoản thu chi. Hãy duy trì sự nhịp nhàng, việc quản lý khéo léo sẽ giúp bạn vượt qua giai đoạn biến động nhẹ này."
+        },
+        "image": "/images/cards/two-of-pentacles.jpg"
+    },
+    {
+        "id": "three-of-pentacles",
+        "name": "Ba Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Không một công trình vĩ đại nào có thể được dựng lên bởi một người đơn độc. Sự hòa quyện giữa các tài năng khác biệt và lòng tôn trọng lẫn nhau sẽ kiến tạo nên những kiệt tác trường tồn với thời gian.",
+            "love": "Mối quan hệ đang trong giai đoạn cùng nhau nỗ lực xây dựng tương lai một cách vô cùng thực tế. Sự lắng nghe, tôn trọng ý kiến và phân chia vai trò rõ ràng sẽ là chất keo gắn kết bền chặt nhất.",
+            "career": "Tinh thần làm việc nhóm, sự chuyên tâm học hỏi và đóng góp kỹ năng chuyên môn đang mang lại sự công nhận xứng đáng. Khi ta gạt bỏ cái tôi để phục vụ cho một mục tiêu lớn, thành công là điều tất yếu.",
+            "finance": "Tài chính dần ổn định nhờ vào những nỗ lực làm việc chân chính và sự hợp tác hiệu quả. Đây là lúc đầu tư vào việc nâng cao tay nghề hoặc tham vấn chuyên gia để gia tăng giá trị bản thân."
+        },
+        "image": "/images/cards/three-of-pentacles.jpg"
+    },
+    {
+        "id": "four-of-pentacles",
+        "name": "Bốn Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Ta thường bám víu vào những vật ngoài thân vì sợ hãi sự mong manh của sự sống. Nhưng sự bám chấp quá mức sẽ đóng băng dòng chảy của tâm hồn; chỉ khi dám buông bàn tay, ta mới có thể ôm trọn thế giới.",
+            "love": "Sự kiểm soát, ghen tuông hoặc tính sở hữu đang biến tình yêu thành một chiếc lồng ngột ngạt. Hãy mở rộng trái tim, tình yêu đích thực luôn phát triển tốt nhất trong một không gian tự do và tin tưởng.",
+            "career": "Nỗi sợ mất mát khiến bạn cố thủ trong vùng an toàn, khước từ mọi sự đổi mới và hợp tác. Việc ôm khư khư những kinh nghiệm cũ sẽ cản trở bạn tiếp cận với những cơ hội phát triển to lớn hơn.",
+            "finance": "Tâm lý khan hiếm và thói quen tích trữ cực đoan đang ngăn cản dòng chảy trù phú của vũ trụ. Tiền bạc cần được lưu thông; sự hào phóng hợp lý sẽ mang lại những giá trị tinh thần vượt xa những con số."
+        },
+        "image": "/images/cards/four-of-pentacles.jpg"
+    },
+    {
+        "id": "five-of-pentacles",
+        "name": "Năm Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Bão tuyết của sự thiếu thốn và cô độc đang bủa vây, khiến tâm hồn cảm thấy bị thế giới ruồng bỏ. Nhưng xin hãy ngước lên, ánh sáng của sự cứu rỗi và lòng trắc ẩn luôn hiện diện ngay ô cửa bên cạnh bạn.",
+            "love": "Sự xa cách về mặt thể xác hoặc những khó khăn vật chất đang tạo ra một sức ép khổng lồ lên tình cảm. Dù khó khăn, hãy nắm chặt tay nhau, bởi nghịch cảnh chính là ngọn lửa thử vàng cho sự gắn kết đích thực.",
+            "career": "Bạn có thể đang trải qua giai đoạn thất nghiệp, mất mát cơ hội hoặc cảm thấy không ai công nhận năng lực của mình. Đừng giấu giếm sự yếu đuối, việc mở lời nhờ sự giúp đỡ là một sự dũng cảm sâu sắc.",
+            "finance": "Một cuộc khủng hoảng tài chính hoặc sự túng quẫn đang gây ra sự lo âu tột độ. Đừng để lòng tự ái ngăn bạn tìm đến những vòng tay hỗ trợ, cộng đồng xung quanh luôn sẵn sàng cưu mang những linh hồn lầm lũi."
+        },
+        "image": "/images/cards/five-of-pentacles.jpg"
+    },
+    {
+        "id": "six-of-pentacles",
+        "name": "Sáu Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Vũ trụ luôn vận hành theo luật nhân quả của sự cho đi và nhận lại một cách vô cùng hài hòa. Hãy giữ cho dòng chảy của lòng từ bi luôn rộng mở, vạn vật đều có mối liên kết thiêng liêng tương trợ lẫn nhau.",
+            "love": "Một mối quan hệ bền vững cần có sự san sẻ đồng đều cả về tình cảm lẫn vật chất. Việc chăm sóc người thương hay biết cách nhận lấy sự yêu thương đều là những biểu hiện tuyệt đẹp của sự hòa hợp.",
+            "career": "Sự hướng dẫn, giúp đỡ từ cấp trên hoặc việc bạn trở thành người dẫn dắt cho người khác đang tạo ra phước lành lớn lao. Lòng vị tha và sự công bằng trong công việc sẽ củng cố những di sản bạn để lại.",
+            "finance": "Bạn có đủ dồi dào để thực hiện những hành động từ thiện, hoặc ngược lại, bạn sẽ nhận được một sự hỗ trợ tài chính lúc cần thiết. Sự lưu chuyển tiền bạc lúc này mang đậm ý nghĩa của sự biết ơn."
+        },
+        "image": "/images/cards/six-of-pentacles.jpg"
+    },
+    {
+        "id": "seven-of-pentacles",
+        "name": "Bảy Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Người làm vườn khôn ngoan biết rằng hạt giống cần thời gian ẩn mình trong đất trước khi đơm hoa. Hãy lùi lại một bước, tĩnh lặng chiêm ngưỡng những thành quả đầu tiên và tin tưởng vào nhịp điệu của Mẹ Thiên Nhiên.",
+            "love": "Những nỗ lực vun đắp đang dần hình thành nên một nền tảng vững chắc cho cả hai. Đừng nôn nóng thúc ép kết quả, sự kiên nhẫn dung dưỡng lúc này sẽ mang lại một tình yêu trưởng thành và trọn vẹn.",
+            "career": "Đây là trạm dừng để bạn đánh giá lại chặng đường dài đã qua và định hướng lại mục tiêu phía trước. Mọi công sức của bạn đang dần tích tụ lại, hãy bền bỉ và đừng bỏ cuộc khi ngày thu hoạch đã cận kề.",
+            "finance": "Những khoản đầu tư dài hạn đang bắt đầu sinh lời chậm rãi. Một sự đánh giá cẩn trọng về tình hình tài sản sẽ giúp bạn quyết định xem nên tiếp tục gieo trồng hay đã đến lúc gặt hái thành quả."
+        },
+        "image": "/images/cards/seven-of-pentacles.jpg"
+    },
+    {
+        "id": "eight-of-pentacles",
+        "name": "Tám Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Sự chữa lành đôi khi ẩn chứa trong chính sự lặp đi lặp lại của những công việc dung dị thường ngày. Sự tận tâm cống hiến cho từng chi tiết nhỏ bé chính là quá trình linh hồn tự mài giũa để trở nên toàn thiện.",
+            "love": "Tình yêu không chỉ là những lời thề non hẹn biển, mà là những hành động chăm sóc tỉ mỉ lặp lại mỗi ngày. Sự cố gắng thay đổi những thói quen nhỏ để hòa hợp với đối phương là minh chứng rõ nhất cho lòng chân thành.",
+            "career": "Đây là lúc bạn miệt mài rèn luyện kỹ năng, đắm chìm vào công việc với một sự tập trung như thiền định. Tinh thần của một người thợ thủ công tận tụy sẽ đưa bạn chạm tay đến sự xuất chúng.",
+            "finance": "Tài chính được xây dựng bằng sự chăm chỉ, kỷ luật và lao động chân chính. Tiền bạc sẽ đến một cách đều đặn và vững chắc khi bạn tập trung vào việc tạo ra những giá trị cốt lõi chất lượng nhất."
+        },
+        "image": "/images/cards/eight-of-pentacles.jpg"
+    },
+    {
+        "id": "nine-of-pentacles",
+        "name": "Chín Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Trải qua bao thăng trầm, linh hồn cuối cùng cũng tìm thấy vườn địa đàng của riêng mình, nơi sự bình yên và trù phú ngập tràn. Bạn hoàn toàn có quyền tận hưởng vẻ đẹp của sự tự tại và tĩnh lặng kiêu hãnh này.",
+            "love": "Bạn yêu thương bản thân đủ nhiều để không cần phải dựa dẫm vào bất kỳ ai khác. Một tình yêu đích thực nếu đến, sẽ là để điểm tô thêm vẻ rực rỡ, chứ không phải để khỏa lấp sự trống trải trong bạn.",
+            "career": "Những nỗ lực không ngừng nghỉ đã đơm hoa kết trái thành sự tự do và độc lập tự chủ. Bạn đang ở đỉnh cao của sự thong dong, gặt hái thành tựu một cách vô cùng ưu nhã và xứng đáng.",
+            "finance": "Sự thịnh vượng về vật chất đã đạt đến mức hoàn mỹ, cho phép bạn tự thưởng cho mình những thứ xa xỉ mang giá trị tôn vinh cái đẹp. Sự an tâm tuyệt đối về tài sản giúp tâm trí bạn hoàn toàn tĩnh tại."
+        },
+        "image": "/images/cards/nine-of-pentacles.jpg"
+    },
+    {
+        "id": "ten-of-pentacles",
+        "name": "Mười Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Ngôi nhà của linh hồn được xây cất trên nền móng của sự bảo bọc, tính truyền thống và sự gắn kết qua nhiều thế hệ. Đây là cái kết viên mãn nhất của vạn vật: một di sản trường tồn dung dưỡng cho tương lai.",
+            "love": "Mối quan hệ không chỉ là chuyện của hai người, mà đã đan xen sâu sắc vào gia đình và nền tảng cốt lõi của nhau. Sự tôn trọng những giá trị truyền thống sẽ tạo nên một bến đỗ vô cùng vững chãi và ấm áp.",
+            "career": "Công việc đã đạt đến mức độ ổn định mang tính dài hạn, hoặc một dự án lớn đã hoàn thành để lại tiếng vang lâu dài. Bạn đã xây dựng được một 'đế chế' đủ khả năng che chở cho nhiều người khác.",
+            "finance": "Sự dồi dào về tài sản, các khoản thừa kế hoặc nền tảng tài chính gia đình vững mạnh đang bảo vệ bạn. Của cải lúc này không chỉ phục vụ cá nhân mà đã trở thành nền móng vững chắc kiến tạo tương lai cho người thân."
+        },
+        "image": "/images/cards/ten-of-pentacles.jpg"
+    },
+    {
+        "id": "page-of-pentacles",
+        "name": "Tiểu Đồng Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Một hạt bụi nhỏ cũng chứa đựng cả vũ trụ nếu ta quan sát bằng đôi mắt của sự thuần khiết và tĩnh tại. Hãy kiên nhẫn trở thành một người học trò ngoan cường, dùng đôi tay trần chạm vào hơi ấm của Mẹ Đất.",
+            "love": "Một tình cảm trong sáng, chậm rãi nhưng vô cùng đáng tin cậy đang thành hình. Không ồn ào hay vội vã, sự chân thành được bộc lộ qua những hành động quan tâm thực tế và sự tôn trọng dịu dàng.",
+            "career": "Một cơ hội học tập, một nền tảng mới hoặc một dự định đang bắt đầu được gieo mầm. Hãy bước những bước chậm mà chắc, tinh thần ham học hỏi sẽ là hành trang tốt nhất cho con đường dài phía trước.",
+            "finance": "Những thông tin tích cực về tiền bạc, hoặc những cơ hội kiếm tiền nhỏ giọt đang xuất hiện. Dù ít ỏi, đó là những hạt giống tuyệt vời cần được quản lý thận trọng để sinh sôi nảy nở về sau."
+        },
+        "image": "/images/cards/page-of-pentacles.jpg"
+    },
+    {
+        "id": "knight-of-pentacles",
+        "name": "Hiệp Sĩ Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Không có con đường tắt nào dẫn tới sự vĩ đại ngoài sự bền bỉ, kiên trung và làm bạn với nhịp điệu chậm rãi của thời gian. Đừng vội vàng, vẻ đẹp của hòn đá cuội nhẵn thín là minh chứng cho sự nhẫn nại của dòng nước.",
+            "love": "Một tình yêu không có những hứa hẹn viển vông, chỉ có sự chung thủy, bao dung và trách nhiệm vững như núi Thái Sơn. Dù có phần tẻ nhạt, đây là nơi trái tim thương tổn có thể an tâm buông bỏ mọi phòng bị.",
+            "career": "Sự nỗ lực không mệt mỏi, làm việc theo nguyên tắc và tập trung vào các thói quen hàng ngày là chìa khóa duy nhất. Thành công đang đến rất gần, xin hãy kiên trì lặp lại những bước đi vững chãi của mình.",
+            "finance": "Tài chính gia tăng một cách chậm chạp nhưng vô cùng an toàn và chắc chắn. Sự tiết kiệm, quản lý rủi ro khắt khe và các khoản đầu tư mang tính truyền thống sẽ bảo vệ tuyệt đối khối tài sản của bạn."
+        },
+        "image": "/images/cards/knight-of-pentacles.jpg"
+    },
+    {
+        "id": "queen-of-pentacles",
+        "name": "Nữ Hoàng Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Lòng từ ái và sự dịu dàng của bạn giống như một vòng tay ấm áp, xoa dịu những khốc liệt của trần thế. Sự hiện diện của bạn là một phước lành dung dưỡng cơ thể, mang lại cảm giác bình yên của sự trở về nhà.",
+            "love": "Tình yêu được nuôi dưỡng bằng sự chăm sóc ân cần, những bữa ăn ấm cúng và một không gian an toàn vô điều kiện. Bạn là bến đỗ bình yên, nơi những mảnh vỡ linh hồn của đối phương được nhẹ nhàng kết dính lại.",
+            "career": "Cách tiếp cận công việc đầy thấu cảm, thực tế và khả năng tạo ra một môi trường làm việc dung hòa giúp bạn được tất cả mọi người yêu mến. Bạn tỏa sáng nhờ khả năng nuôi dưỡng sự nghiệp bằng cả trái tim.",
+            "finance": "Một trực giác nhạy bén kết hợp với sự khôn ngoan trong việc quản lý vật chất. Bạn biết cách sử dụng tiền bạc để mang lại sự sung túc, thoải mái cho bản thân và chăm lo chu đáo cho những người xung quanh."
+        },
+        "image": "/images/cards/queen-of-pentacles.jpg"
+    },
+    {
+        "id": "king-of-pentacles",
+        "name": "Vua Tiền",
+        "arcana": "Minor",
+        "suit": "Pentacles",
+        "meanings": {
+            "general": "Đại diện cho sự trưởng thành tột bậc của thế giới vật chất, nơi quyền lực được sử dụng để bảo bọc và tạo ra sự trù phú cho muôn loài. Hãy tự hào về vương quốc bạn đã xây dựng nên bằng bàn tay chai sạn và ý chí kiên cường.",
+            "love": "Mối quan hệ vô cùng vững chắc, được che chở bởi sự hào phóng, trung thành và khả năng cung cấp nền tảng sống tốt nhất. Sự bao dung và uy nghiêm của bạn mang lại cảm giác an toàn tuyệt đối cho người thương.",
+            "career": "Một nhà lãnh đạo kiệt xuất với tầm nhìn thực tế, điềm tĩnh vượt qua mọi sóng gió để đạt đến đỉnh cao vinh quang. Uy tín và kinh nghiệm của bạn là tài sản vô giá, mở ra những con đường phát triển bền vững.",
+            "finance": "Bạn đã hoàn toàn làm chủ nghệ thuật tạo ra và giữ gìn của cải. Sự thịnh vượng lúc này không chỉ là những con số, mà là quyền lực để kiến tạo nên những di sản mang lại giá trị vĩnh cửu cho xã hội."
+        },
+        "image": "/images/cards/king-of-pentacles.jpg"
+    }
+]
