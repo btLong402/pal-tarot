@@ -73,7 +73,7 @@ function buildUserPrompt(payload: Required<ReadingRequest>) {
     "### NHIỆM VỤ CHIẾN THUẬT:",
     "Dựa trên dữ liệu trên, hãy thực hiện luận giải theo đúng framework 'The Truth' (Thực trạng - Động cơ - Xu hướng - Thức tỉnh).",
     "- Yêu cầu: Viết dưới dạng 1-2 đoạn văn Caption TikTok, không chia đề mục.",
-    "- Ngôn ngữ: Tiếng Việt sắc bén, trực diện, tuyệt đối không dùng văn chữa lành mơ hồ.",
+    "- Ngôn ngữ: Tiếng Việt với giọng văn sắc sảo nhưng thấu cảm. Đừng chỉ tập trung vào mặt tối, hãy cho lữ khách thấy ánh sáng và giá trị của họ sau những bài học này.",
     "- Kết thúc: Trọn câu, đủ ý, mang tính 'đinh' để người đọc giật mình."
   ].join("\n");
 }
