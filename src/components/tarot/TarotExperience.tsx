@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { RotateCcw, Sparkles, WandSparkles } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { TAROT_CARDS, TAROT_CARD_MAP } from "@/src/data/cards";
@@ -28,26 +28,15 @@ function shuffleIds(ids: string[]): string[] {
   return clone;
 }
 
-function cardArc(index: number, total: number) {
-  const ratio = total > 1 ? index / (total - 1) : 0.5;
-  const angle = -45 + ratio * 90;
-  const radius = 520;
-  const radians = (angle * Math.PI) / 180;
-
-  return {
-    x: Math.sin(radians) * radius,
-    y: Math.cos(radians) * 72,
-    rotate: angle * 0.64,
-  };
-}
-
-function shuffledPose(index: number, seed: number) {
+function shuffledPose(index: number, seed: number, deckWidth: number) {
   const wave = Math.sin(index * 1.87 + seed * 0.61);
   const wave2 = Math.cos(index * 0.93 + seed * 1.13);
+  const spreadX = Math.min(154, Math.max(52, deckWidth * 0.32));
+  const spreadY = Math.min(92, Math.max(34, deckWidth * 0.2));
 
   return {
-    x: wave * 154,
-    y: wave2 * 92 - 46,
+    x: wave * spreadX,
+    y: wave2 * spreadY - spreadY / 2,
     rotate: wave * 20,
   };
 }
@@ -75,8 +64,11 @@ export default function TarotExperience() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
   const [aiError, setAiError] = useState("");
+  const [deckWidth, setDeckWidth] = useState(360);
 
   const timeoutsRef = useRef<number[]>([]);
+  const deckAreaRef = useRef<HTMLDivElement>(null);
+  const carouselViewportRef = useRef<HTMLDivElement>(null);
 
   const spreadOptions = useMemo(
     () =>
@@ -116,6 +108,24 @@ export default function TarotExperience() {
     () => deckOrder.map((id) => ({ id, hidden: drawnIds.has(id) })),
     [deckOrder, drawnIds],
   );
+  const visibleDeck = useMemo(
+    () => deckForDisplay.filter((slot) => !slot.hidden),
+    [deckForDisplay],
+  );
+  const infiniteDeck = useMemo(() => {
+    if (visibleDeck.length === 0) {
+      return [] as Array<{ id: string; originalIndex: number }>;
+    }
+
+    return Array.from({ length: visibleDeck.length * 3 }, (_, index) => {
+      const originalIndex = index % visibleDeck.length;
+
+      return {
+        id: visibleDeck[originalIndex].id,
+        originalIndex,
+      };
+    });
+  }, [visibleDeck]);
 
   const clearTimers = () => {
     timeoutsRef.current.forEach((timerId) => window.clearTimeout(timerId));
@@ -125,6 +135,25 @@ export default function TarotExperience() {
   useEffect(() => {
     return () => clearTimers();
   }, []);
+
+  useEffect(() => {
+    const element = deckAreaRef.current;
+    if (!element) {
+      return;
+    }
+
+    const observer = new ResizeObserver((entries) => {
+      const next = entries[0]?.contentRect.width;
+      if (next && Number.isFinite(next)) {
+        setDeckWidth(next);
+      }
+    });
+
+    observer.observe(element);
+    setDeckWidth(element.getBoundingClientRect().width || 360);
+
+    return () => observer.disconnect();
+  }, [ritualStage]);
 
   useEffect(() => {
     if (readingMode === "classic" && spreadType === "custom") {
@@ -164,6 +193,42 @@ export default function TarotExperience() {
 
     return () => window.clearInterval(timer);
   }, [aiReading]);
+
+  useEffect(() => {
+    if (ritualStage !== "deck" || deckPhase !== "spread") {
+      return;
+    }
+
+    const viewport = carouselViewportRef.current;
+    if (!viewport || visibleDeck.length === 0) {
+      return;
+    }
+
+    const segmentWidth = viewport.scrollWidth / 3;
+    if (!segmentWidth) {
+      return;
+    }
+
+    viewport.scrollLeft = segmentWidth;
+  }, [deckPhase, ritualStage, visibleDeck.length]);
+
+  const onCarouselScroll = () => {
+    const viewport = carouselViewportRef.current;
+    if (!viewport) {
+      return;
+    }
+
+    const segmentWidth = viewport.scrollWidth / 3;
+    if (!segmentWidth) {
+      return;
+    }
+
+    if (viewport.scrollLeft < segmentWidth * 0.5) {
+      viewport.scrollLeft += segmentWidth;
+    } else if (viewport.scrollLeft > segmentWidth * 1.5) {
+      viewport.scrollLeft -= segmentWidth;
+    }
+  };
 
   const startRitual = () => {
     if (!canStartRitual) {
@@ -449,43 +514,83 @@ export default function TarotExperience() {
                 ? "Bộ bài đang xáo..."
                 : `Chọn ${targetCount} lá bài (${drawnCards.length}/${targetCount})`}
             </p>
+            {deckPhase === "spread" ? (
+              <p className="mt-1 text-xs text-amber-100/60">Cuộn ngang kiểu carousel để chọn lá bài.</p>
+            ) : null}
 
-            <div className="relative mt-4 min-h-[64vh] overflow-hidden rounded-2xl bg-gradient-to-b from-black/10 to-black/20 lg:min-h-[70vh]">
-              <div className="pointer-events-none absolute inset-x-8 bottom-3 h-6 rounded-full bg-black/45 blur-xl" aria-hidden="true" />
-              {deckForDisplay.map((slot, index) => {
-                if (slot.hidden) {
-                  return null;
-                }
+            <div
+              ref={deckAreaRef}
+              className="relative mt-4 min-h-[24rem] overflow-hidden rounded-2xl bg-gradient-to-b from-black/10 to-black/20 lg:min-h-[30rem]"
+            >
+              <AnimatePresence mode="wait">
+                {deckPhase === "shuffling" ? (
+                  <motion.div
+                    key="deck-shuffling"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.22, ease: "easeOut" }}
+                    className="absolute inset-0"
+                  >
+                    <div className="pointer-events-none absolute inset-x-8 bottom-3 h-6 rounded-full bg-black/45 blur-xl" aria-hidden="true" />
+                    {deckForDisplay.map((slot, index) => {
+                      if (slot.hidden) {
+                        return null;
+                      }
 
-                const spreadPose = cardArc(index, deckForDisplay.length);
-                const randomPose = shuffledPose(index, shuffleSeed);
+                      const randomPose = shuffledPose(index, shuffleSeed, deckWidth);
 
-                return (
-                  <motion.button
-                    key={slot.id}
-                    type="button"
-                    aria-label={`Chọn lá ${index + 1}`}
-                    onClick={() => onPickCard(slot.id)}
-                    disabled={!canPickCards}
-                    className="absolute left-1/2 top-[56%] w-[7.5rem] aspect-[300/527] -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-xl bg-[url('/images/cards/CardBacks.jpg')] bg-cover bg-center shadow-[0_12px_28px_rgba(0,0,0,0.45)] outline-none will-change-transform focus-visible:ring-2 focus-visible:ring-amber-300 disabled:cursor-not-allowed lg:w-[8.75rem]"
-                    animate={
-                      deckPhase === "shuffling"
-                        ? { x: randomPose.x, y: randomPose.y, rotate: randomPose.rotate }
-                        : { x: spreadPose.x, y: spreadPose.y, rotate: spreadPose.rotate }
-                    }
-                    transition={{
-                      type: deckPhase === "shuffling" ? "tween" : "spring",
-                      duration: deckPhase === "shuffling" ? 0.18 : 0.22,
-                      ease: "easeOut",
-                      stiffness: 900,
-                      damping: 32,
-                      mass: 0.45,
-                    }}
-                    style={{ zIndex: index + 1 }}
-                    whileHover={canPickCards ? { y: spreadPose.y - 8, scale: 1.02 } : undefined}
-                  />
-                );
-              })}
+                      return (
+                        <motion.button
+                          key={slot.id}
+                          type="button"
+                          aria-label={`Chọn lá ${index + 1}`}
+                          onClick={() => onPickCard(slot.id)}
+                          disabled
+                          className="absolute left-1/2 top-[56%] w-[7.5rem] aspect-[300/527] -translate-x-1/2 -translate-y-1/2 cursor-not-allowed rounded-xl bg-[url('/images/cards/CardBacks.jpg')] bg-cover bg-center shadow-[0_12px_28px_rgba(0,0,0,0.45)] outline-none will-change-transform opacity-95 lg:w-[8.75rem]"
+                          animate={{ x: randomPose.x, y: randomPose.y, rotate: randomPose.rotate }}
+                          transition={{
+                            type: "tween",
+                            duration: 0.18,
+                            ease: "easeOut",
+                          }}
+                          style={{ zIndex: index + 1 }}
+                        />
+                      );
+                    })}
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="deck-carousel"
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -12 }}
+                    transition={{ duration: 0.26, ease: "easeOut" }}
+                    className="absolute inset-0 flex items-center"
+                  >
+                    <div
+                      ref={carouselViewportRef}
+                      onScroll={onCarouselScroll}
+                      className="w-full overflow-x-auto px-3 py-4 [scrollbar-width:thin]"
+                    >
+                      <div className="mx-auto flex w-max snap-x snap-mandatory gap-3 rounded-2xl bg-black/20 px-3 py-4">
+                        {infiniteDeck.map((slot, index) => {
+                          return (
+                            <button
+                              key={`${slot.id}-${index}`}
+                              type="button"
+                              aria-label={`Chọn lá ${slot.originalIndex + 1}`}
+                              onClick={() => onPickCard(slot.id)}
+                              disabled={!canPickCards}
+                              className="aspect-[300/527] w-[6.5rem] shrink-0 snap-center cursor-pointer rounded-xl bg-[url('/images/cards/CardBacks.jpg')] bg-cover bg-center shadow-[0_12px_28px_rgba(0,0,0,0.45)] outline-none transition-transform focus-visible:ring-2 focus-visible:ring-amber-300 active:scale-[0.98] disabled:cursor-not-allowed sm:w-[7rem] lg:w-[8rem]"
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </section>
         ) : null}
