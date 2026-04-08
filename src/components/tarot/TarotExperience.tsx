@@ -70,6 +70,7 @@ export default function TarotExperience() {
   const deckAreaRef = useRef<HTMLDivElement>(null);
   const carouselViewportRef = useRef<HTMLDivElement>(null);
   const carouselDragRef = useRef({
+    isPointerDown: false,
     isDragging: false,
     pointerId: -1,
     startX: 0,
@@ -315,7 +316,8 @@ export default function TarotExperience() {
     stopMomentumScroll();
     suppressCardClickRef.current = false;
     carouselDragRef.current = {
-      isDragging: true,
+      isPointerDown: true,
+      isDragging: false,
       pointerId: event.pointerId,
       startX: event.clientX,
       startScrollLeft: viewport.scrollLeft,
@@ -327,22 +329,31 @@ export default function TarotExperience() {
     momentum.lastX = event.clientX;
     momentum.lastTs = performance.now();
 
-    setIsDraggingCarousel(true);
-    viewport.setPointerCapture(event.pointerId);
+    setIsDraggingCarousel(false);
   };
 
   const onCarouselPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
     const viewport = carouselViewportRef.current;
     const drag = carouselDragRef.current;
     const momentum = carouselMomentumRef.current;
-    if (!viewport || !drag.isDragging || drag.pointerId !== event.pointerId) {
+    if (!viewport || !drag.isPointerDown || drag.pointerId !== event.pointerId) {
       return;
     }
 
     const deltaX = event.clientX - drag.startX;
-    if (Math.abs(deltaX) > 4) {
+    if (!drag.isDragging && Math.abs(deltaX) > 10) {
+      drag.isDragging = true;
+      viewport.setPointerCapture(event.pointerId);
+      setIsDraggingCarousel(true);
+    }
+
+    if (drag.isDragging && Math.abs(deltaX) > 4) {
       drag.hasMoved = true;
       suppressCardClickRef.current = true;
+    }
+
+    if (!drag.isDragging) {
+      return;
     }
 
     const now = performance.now();
@@ -358,19 +369,22 @@ export default function TarotExperience() {
   const onCarouselPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
     const viewport = carouselViewportRef.current;
     const drag = carouselDragRef.current;
-    if (!drag.isDragging || drag.pointerId !== event.pointerId) {
+    if (!drag.isPointerDown || drag.pointerId !== event.pointerId) {
       return;
     }
 
+    const wasDragging = drag.isDragging;
+
+    drag.isPointerDown = false;
     carouselDragRef.current.isDragging = false;
     setIsDraggingCarousel(false);
 
-    if (viewport?.hasPointerCapture(event.pointerId)) {
+    if (wasDragging && viewport?.hasPointerCapture(event.pointerId)) {
       viewport.releasePointerCapture(event.pointerId);
     }
 
     const launchVelocity = carouselMomentumRef.current.velocity;
-    if (carouselDragRef.current.hasMoved && Math.abs(launchVelocity) > 0.04) {
+    if (drag.hasMoved && Math.abs(launchVelocity) > 0.04) {
       startMomentumScroll(launchVelocity);
     }
 
