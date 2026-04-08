@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { RotateCcw, Sparkles, WandSparkles } from "lucide-react";
@@ -69,6 +69,22 @@ export default function TarotExperience() {
   const timeoutsRef = useRef<number[]>([]);
   const deckAreaRef = useRef<HTMLDivElement>(null);
   const carouselViewportRef = useRef<HTMLDivElement>(null);
+  const carouselDragRef = useRef({
+    isDragging: false,
+    pointerId: -1,
+    startX: 0,
+    startScrollLeft: 0,
+    hasMoved: false,
+  });
+  const carouselMomentumRef = useRef({
+    velocity: 0,
+    lastX: 0,
+    lastTs: 0,
+    rafId: 0,
+  });
+  const suppressCardClickRef = useRef(false);
+  const [isDraggingCarousel, setIsDraggingCarousel] = useState(false);
+  const [isMomentumScrolling, setIsMomentumScrolling] = useState(false);
 
   const spreadOptions = useMemo(
     () =>
@@ -212,6 +228,66 @@ export default function TarotExperience() {
     viewport.scrollLeft = segmentWidth;
   }, [deckPhase, ritualStage, visibleDeck.length]);
 
+  const stopMomentumScroll = () => {
+    const momentum = carouselMomentumRef.current;
+    if (momentum.rafId) {
+      window.cancelAnimationFrame(momentum.rafId);
+      momentum.rafId = 0;
+    }
+    momentum.velocity = 0;
+    setIsMomentumScrolling(false);
+  };
+
+  useEffect(() => {
+    return () => stopMomentumScroll();
+  }, []);
+
+  useEffect(() => {
+    if (ritualStage !== "deck" || deckPhase !== "spread") {
+      stopMomentumScroll();
+    }
+  }, [deckPhase, ritualStage]);
+
+  const startMomentumScroll = (initialVelocity: number) => {
+    const viewport = carouselViewportRef.current;
+    if (!viewport) {
+      return;
+    }
+
+    stopMomentumScroll();
+    setIsMomentumScrolling(true);
+
+    const momentum = carouselMomentumRef.current;
+    momentum.velocity = initialVelocity;
+    momentum.lastTs = performance.now();
+
+    const tick = (timestamp: number) => {
+      const panel = carouselViewportRef.current;
+      if (!panel) {
+        stopMomentumScroll();
+        return;
+      }
+
+      const elapsed = Math.min(34, timestamp - momentum.lastTs);
+      momentum.lastTs = timestamp;
+
+      panel.scrollLeft -= momentum.velocity * elapsed;
+      onCarouselScroll();
+
+      const decay = Math.pow(0.93, elapsed / 16.67);
+      momentum.velocity *= decay;
+
+      if (Math.abs(momentum.velocity) < 0.02) {
+        stopMomentumScroll();
+        return;
+      }
+
+      momentum.rafId = window.requestAnimationFrame(tick);
+    };
+
+    momentum.rafId = window.requestAnimationFrame(tick);
+  };
+
   const onCarouselScroll = () => {
     const viewport = carouselViewportRef.current;
     if (!viewport) {
@@ -228,6 +304,79 @@ export default function TarotExperience() {
     } else if (viewport.scrollLeft > segmentWidth * 1.5) {
       viewport.scrollLeft -= segmentWidth;
     }
+  };
+
+  const onCarouselPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const viewport = carouselViewportRef.current;
+    if (!viewport) {
+      return;
+    }
+
+    stopMomentumScroll();
+    suppressCardClickRef.current = false;
+    carouselDragRef.current = {
+      isDragging: true,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startScrollLeft: viewport.scrollLeft,
+      hasMoved: false,
+    };
+
+    const momentum = carouselMomentumRef.current;
+    momentum.velocity = 0;
+    momentum.lastX = event.clientX;
+    momentum.lastTs = performance.now();
+
+    setIsDraggingCarousel(true);
+    viewport.setPointerCapture(event.pointerId);
+  };
+
+  const onCarouselPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const viewport = carouselViewportRef.current;
+    const drag = carouselDragRef.current;
+    const momentum = carouselMomentumRef.current;
+    if (!viewport || !drag.isDragging || drag.pointerId !== event.pointerId) {
+      return;
+    }
+
+    const deltaX = event.clientX - drag.startX;
+    if (Math.abs(deltaX) > 4) {
+      drag.hasMoved = true;
+      suppressCardClickRef.current = true;
+    }
+
+    const now = performance.now();
+    const dt = Math.max(8, now - momentum.lastTs);
+    const instantVelocity = (event.clientX - momentum.lastX) / dt;
+    momentum.velocity = momentum.velocity * 0.75 + instantVelocity * 0.25;
+    momentum.lastX = event.clientX;
+    momentum.lastTs = now;
+
+    viewport.scrollLeft = drag.startScrollLeft - deltaX;
+  };
+
+  const onCarouselPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const viewport = carouselViewportRef.current;
+    const drag = carouselDragRef.current;
+    if (!drag.isDragging || drag.pointerId !== event.pointerId) {
+      return;
+    }
+
+    carouselDragRef.current.isDragging = false;
+    setIsDraggingCarousel(false);
+
+    if (viewport?.hasPointerCapture(event.pointerId)) {
+      viewport.releasePointerCapture(event.pointerId);
+    }
+
+    const launchVelocity = carouselMomentumRef.current.velocity;
+    if (carouselDragRef.current.hasMoved && Math.abs(launchVelocity) > 0.04) {
+      startMomentumScroll(launchVelocity);
+    }
+
+    window.setTimeout(() => {
+      suppressCardClickRef.current = false;
+    }, 0);
   };
 
   const startRitual = () => {
@@ -514,10 +663,6 @@ export default function TarotExperience() {
                 ? "Bộ bài đang xáo..."
                 : `Chọn ${targetCount} lá bài (${drawnCards.length}/${targetCount})`}
             </p>
-            {deckPhase === "spread" ? (
-              <p className="mt-1 text-xs text-amber-100/60">Cuộn ngang kiểu carousel để chọn lá bài.</p>
-            ) : null}
-
             <div
               ref={deckAreaRef}
               className="relative mt-4 min-h-[24rem] overflow-hidden rounded-2xl bg-gradient-to-b from-black/10 to-black/20 lg:min-h-[30rem]"
@@ -571,16 +716,31 @@ export default function TarotExperience() {
                     <div
                       ref={carouselViewportRef}
                       onScroll={onCarouselScroll}
-                      className="w-full overflow-x-auto px-3 py-4 [scrollbar-width:thin]"
+                        onPointerDown={onCarouselPointerDown}
+                        onPointerMove={onCarouselPointerMove}
+                        onPointerUp={onCarouselPointerUp}
+                        onPointerCancel={onCarouselPointerUp}
+                        className={`w-full overflow-x-auto px-3 py-4 select-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+                          isDraggingCarousel ? "cursor-grabbing" : "cursor-grab"
+                        }`}
                     >
-                      <div className="mx-auto flex w-max snap-x snap-mandatory gap-3 rounded-2xl bg-black/20 px-3 py-4">
+                      <div
+                        className={`mx-auto flex w-max snap-x gap-3 rounded-2xl bg-black/20 px-3 py-4 ${
+                          isDraggingCarousel || isMomentumScrolling ? "snap-none" : "snap-mandatory"
+                        }`}
+                      >
                         {infiniteDeck.map((slot, index) => {
                           return (
                             <button
                               key={`${slot.id}-${index}`}
                               type="button"
                               aria-label={`Chọn lá ${slot.originalIndex + 1}`}
-                              onClick={() => onPickCard(slot.id)}
+                                onClick={() => {
+                                  if (suppressCardClickRef.current) {
+                                    return;
+                                  }
+                                  onPickCard(slot.id);
+                                }}
                               disabled={!canPickCards}
                               className="aspect-[300/527] w-[6.5rem] shrink-0 snap-center cursor-pointer rounded-xl bg-[url('/images/cards/CardBacks.jpg')] bg-cover bg-center shadow-[0_12px_28px_rgba(0,0,0,0.45)] outline-none transition-transform focus-visible:ring-2 focus-visible:ring-amber-300 active:scale-[0.98] disabled:cursor-not-allowed sm:w-[7rem] lg:w-[8rem]"
                             />
