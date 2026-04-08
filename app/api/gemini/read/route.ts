@@ -13,7 +13,7 @@ type ReadingRequest = {
   }>;
 };
 
-const MODEL_CANDIDATES = ["gemini-3-flash-preview", "gemini-3.1-flash-lite-preview", "gemini-3.1-flash-preview"];
+const MODEL_CANDIDATES = ["gemini-3.1-flash-lite-preview", "gemini-3.1-flash-preview", "gemini-3-flash-preview"];
 
 type GeminiSdkError = {
   status?: number;
@@ -34,15 +34,13 @@ function buildContinuationPrompt(fullPrompt: string, partialAnswer: string) {
   const tail = partialAnswer.slice(-900);
 
   return [
-    "Bạn đang viết dở phần luận giải tarot và bị ngắt do giới hạn token.",
-    "Nhiệm vụ: tiếp tục viết phần còn lại ngay sau đoạn đã có, không lặp lại nội dung cũ.",
-    "Nếu đã đủ ý thì chỉ cần viết đoạn kết ngắn gọn, trọn câu.",
+    "PHẦN TIẾP NỐI (TOKEN LIMIT REACHED):",
+    "Bạn đang viết dở phần luận giải trên và bị ngắt giữa chừng.",
+    "Nhiệm vụ: Viết tiếp ngay từ đoạn bị ngắt, giữ nguyên phong cách 'Anti-healing'.",
+    "LƯU Ý: Không chào hỏi lại, không lặp lại ý cũ, đi thẳng vào nội dung còn thiếu và kết thúc trọn vẹn.",
     "",
-    "Bối cảnh gốc:",
-    fullPrompt,
-    "",
-    "Đoạn đã viết đến đây:",
-    tail,
+    "--- ĐOẠN CUỐI CÙNG BẠN ĐÃ VIẾT: ---",
+    `...${tail}`,
   ].join("\n");
 }
 
@@ -51,21 +49,32 @@ function sanitizeText(input: string, maxLength: number): string {
 }
 
 function buildUserPrompt(payload: Required<ReadingRequest>) {
+  // 1. Xử lý dữ liệu lá bài súc tích hơn
   const cardsText = payload.cards
     .map(
       (card, index) =>
-        `${index + 1}. Vị trí: ${card.position}\nLá bài: ${card.name}\nThông điệp cốt lõi: ${card.meaning}`,
+        `[Lá ${index + 1}] - Vị trí: ${card.position} | Tên: ${card.name} | Key: ${card.meaning}`,
     )
-    .join("\n\n");
+    .join("\n");
+
+  // 2. Xử lý câu hỏi nếu người dùng để trống (Trải bài trực giác)
+  const questionContext = payload.question && payload.question.trim() !== ""
+    ? `Câu hỏi: "${payload.question}"`
+    : "Chủ đề: Trải bài trực giác (đọc năng lượng tổng quan)";
 
   return [
-    "Ngữ cảnh phiên trải bài:",
-    `- Câu hỏi của Lữ khách: ${payload.question}`,
-    `- Kiểu trải bài: ${payload.spreadLabel}`,
-    "- Dữ liệu các lá bài:",
+    "### BỐI CẢNH PHIÊN TRẢI BÀI",
+    `- ${questionContext}`,
+    `- Hình thức: ${payload.spreadLabel}`,
+    "",
+    "### DỮ LIỆU NĂNG LƯỢNG",
     cardsText,
-    "\nYêu cầu: Hãy viết lời luận giải liền mạch bằng tiếng Việt, đúng cấu trúc markdown đã định trong system prompt.",
-    "Luôn hoàn tất đầy đủ các phần và kết thúc bằng câu trọn nghĩa, không dừng giữa câu.",
+    "",
+    "### NHIỆM VỤ CHIẾN THUẬT:",
+    "Dựa trên dữ liệu trên, hãy thực hiện luận giải theo đúng framework 'The Truth' (Thực trạng - Động cơ - Xu hướng - Thức tỉnh).",
+    "- Yêu cầu: Viết dưới dạng 1-2 đoạn văn Caption TikTok, không chia đề mục.",
+    "- Ngôn ngữ: Tiếng Việt sắc bén, trực diện, tuyệt đối không dùng văn chữa lành mơ hồ.",
+    "- Kết thúc: Trọn câu, đủ ý, mang tính 'đinh' để người đọc giật mình."
   ].join("\n");
 }
 
@@ -136,17 +145,17 @@ export async function POST(request: Request) {
   const cards =
     Array.isArray(body.cards) && body.cards.length > 0
       ? body.cards
-          .map((card) => ({
-            id: typeof card.id === "string" ? sanitizeText(card.id, 120) : "",
-            name: typeof card.name === "string" ? sanitizeText(card.name, 120) : "",
-            position:
-              typeof card.position === "string" ? sanitizeText(card.position, 80) : "Không xác định",
-            meaning:
-              typeof card.meaning === "string"
-                ? sanitizeText(card.meaning, 700)
-                : "Ý nghĩa chưa được cung cấp.",
-          }))
-          .filter((card) => card.id && card.name)
+        .map((card) => ({
+          id: typeof card.id === "string" ? sanitizeText(card.id, 120) : "",
+          name: typeof card.name === "string" ? sanitizeText(card.name, 120) : "",
+          position:
+            typeof card.position === "string" ? sanitizeText(card.position, 80) : "Không xác định",
+          meaning:
+            typeof card.meaning === "string"
+              ? sanitizeText(card.meaning, 700)
+              : "Ý nghĩa chưa được cung cấp.",
+        }))
+        .filter((card) => card.id && card.name)
       : [];
 
   if (!spreadLabel || cards.length === 0) {
